@@ -27,7 +27,6 @@ server.start(err => {
 
   if (err) return console.error(err);
 
-  console.log(``);
   console.log(`Server running at: ${URL}:${PORT}`);
 
   server.register({
@@ -56,7 +55,7 @@ server.start(err => {
         'hapi-devine-routes': {
           log,
           path: path.join(__dirname, `routes`),
-          after: 'hapi-devine-mongodb'
+          after: `hapi-devine-mongodb`
         },
 
       }
