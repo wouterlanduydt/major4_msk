@@ -9,39 +9,38 @@ class Store {
   tours = [
     {
       _id: 1,
-      tour: `tour1`,
-      tourTitle: `tour1`,
-      tourText: `blablabla`
+      map: `tour1`,
+      title: `Surreal tour`,
+      desc: `blablabla`
     },
     {
       _id: 2,
-      tour: `tour1`,
-      tourTitle: `tour2`,
-      tourText: `blablabla`
+      map: `tour1`,
+      title: `Modern tour`,
+      desc: `blablabla`
     },
     {
       _id: 3,
-      tour: `tour1`,
-      tourTitle: `tour3`,
-      tourText: `blablabla`
+      map: `tour1`,
+      title: `Belgian tour`,
+      desc: `blablabla`
     },
     {
       _id: 4,
-      tour: `tour1`,
-      tourTitle: `tour4`,
-      tourText: `blablabla`
+      map: `tour1`,
+      title: `Far far away tour`,
+      desc: `blablabla`
     }, {
       _id: 5,
-      tour: `tour1`,
-      tourTitle: `tour5`,
-      tourText: `blablabla`
+      map: `tour1`,
+      title: `Garden lover tour`,
+      desc: `blablabla`
     }
   ]
 
   @action
   getTourById = _id => {
-    console.log(_id);
-    return this.tours.find(s => s._id === parseInt(_id));
+    return this.tours.find(t => t._id === parseInt(_id));
   }
 
 }

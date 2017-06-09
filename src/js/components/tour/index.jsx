@@ -4,16 +4,16 @@ import {string, number} from 'prop-types';
 import {Link} from 'react-router-dom';
 import {observer} from 'mobx-react';
 
-const Tour = ({tour, tourTitle, tourText, _id}) => {
+const Tour = ({map, title, desc, _id}) => {
   return (
     <li>
-      <img src={`../../../assets/svg/${tour}.svg`} alt={`${tour}`} />
+      <img src={`../../../assets/svg/${map}.svg`} alt={`${map}`} />
       <header>
-        <h2>{tourTitle}</h2>
+        <h2>{title}</h2>
       </header>
-      <p>{tourText}</p>
+      <p>{desc}</p>
 
-      <Link to={`tours/${_id}`} >
+      <Link to={`tour/${_id}`} >
         <p>Ontdek meer</p>
       </Link>
 
@@ -22,9 +22,9 @@ const Tour = ({tour, tourTitle, tourText, _id}) => {
 };
 
 Tour.propTypes = {
-  tour: string.isRequired,
-  tourTitle: string.isRequired,
-  tourText: string.isRequired,
+  map: string.isRequired,
+  title: string.isRequired,
+  desc: string.isRequired,
   _id: number.isRequired
 };
 
