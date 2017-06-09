@@ -4,8 +4,11 @@ import {string} from 'prop-types';
 import {inject, observer} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import Home from './Home';
+import Create from './Create';
+import Tours from './Tours';
+import ArtworksMap from './ArtworksMap';
 
 const App = ({name}) => (
 
@@ -18,10 +21,12 @@ const App = ({name}) => (
     </header>
 
     <section>
-      <Route
-        exact path='/'
-        component={Home}
-      />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/create' component={Create} />
+        <Route exact path='/tours' component={Tours} />
+        <Route exact path='/map' component={ArtworksMap} />
+      </Switch>
     </section>
 
   </section>
