@@ -3,7 +3,7 @@ import {observable} from 'mobx';
 class Store {
 
   @observable
-  name = `msk_opreis`
+  name = `Zoek cultuur niet te ver`
 
 }
 
