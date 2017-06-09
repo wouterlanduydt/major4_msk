@@ -15,14 +15,15 @@ const ArtworksMap = () => {
         zoom={[4]}
         minZoom={4}
         maxZoom={6}
-        containerStyle={{height: `100vh`, width: `100vw`}}
-        >
+        containerStyle={{height: `100vh`, width: `100vw`}}>
+
         <Layer
           type='symbol'
-          id='marker'
+          id='1'
           layout={{"icon-image": `marker-15`}}>
-          <Feature coordinates={[- 0.481747846041145, 51.3233379650232]} />
+          <Feature coordinates={[3.5744025, 51.0827681]} />
         </Layer>
+
       </ReactMapboxGl>
     </section>
   );
