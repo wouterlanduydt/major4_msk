@@ -1,8 +1,19 @@
 import React from 'react';
+import {inject, observer, PropTypes} from 'mobx-react';
 import {Link} from 'react-router-dom';
+
 import ReactMapboxGl, {Layer, Feature} from "react-mapbox-gl";
 
-const ArtworksMap = () => {
+const ArtworksMap = ({store}) => {
+
+  const {artworks, getArtworkById} = store;
+
+  const handleAnnotationClick = args => {
+    const clickedAnnotationId = parseInt(args.feature.layer.id);
+    const clickedArtwork = getArtworkById(clickedAnnotationId);
+    console.log(clickedArtwork);
+  };
+
   return (
     <section>
       <Link to='/' >
@@ -17,16 +28,27 @@ const ArtworksMap = () => {
         maxZoom={6}
         containerStyle={{height: `100vh`, width: `100vw`}}>
 
-        <Layer
-          type='symbol'
-          id='1'
-          layout={{"icon-image": `marker-15`}}>
-          <Feature coordinates={[3.5744025, 51.0827681]} />
-        </Layer>
+        {
+          artworks.map(
+          a => (
+            <Layer
+              type='symbol'
+              id={a._id.toString()}
+              key={a._id}
+              layout={{"icon-image": `marker-15`}}>
+              <Feature onClick={handleAnnotationClick} coordinates={[a.lat, a.lon]} />
+            </Layer>
+            )
+          )
+        }
 
       </ReactMapboxGl>
     </section>
   );
 };
 
-export default ArtworksMap;
+ArtworksMap.propTypes = {
+  store: PropTypes.observableObject.isRequired
+};
+
+export default inject(`store`)(observer(ArtworksMap));
