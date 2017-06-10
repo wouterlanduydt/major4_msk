@@ -1,14 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import CitiesMap from '../components/citiesmap/';
+
 const Create = () => {
   return (
-    <div>
+    <section>
       <Link to='/' >
         <p>Terug</p>
       </Link>
-      <p>Hello Create</p>
-    </div>
+      <header>
+        <h1>Welke steden vind je interessant?</h1>
+      </header>
+      <CitiesMap />
+    </section>
 
   );
 };

@@ -3,9 +3,6 @@ import {observable, action} from 'mobx';
 class Store {
 
   @observable
-  name = `Zoek cultuur niet te ver`
-
-  @observable
   tours = [
     {
       _id: 1,
