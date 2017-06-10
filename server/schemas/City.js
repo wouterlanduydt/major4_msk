@@ -9,37 +9,37 @@ const schema = {
   },
 
   nPainters: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.number()
   },
 
   nMusea: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.number()
   },
 
   painters: {
-    type: String,
+    type: Array,
     required: true,
     validation: Joi.array()
   },
 
   distance: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.number()
   },
 
   lon: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.number()
   },
 
   lat: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.number()
   },
@@ -52,6 +52,12 @@ const schema = {
 
   country: {
     type: String,
+    required: true,
+    validation: Joi.string()
+  },
+
+  loved: {
+    type: Boolean,
     required: true,
     validation: Joi.string()
   }

@@ -11,7 +11,7 @@ const Tours = ({tours}) => {
         <p>Terug</p>
       </Link>
 
-      <h1>Onze Tours</h1>
+      <h1>Onze Touren</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias rerum a quos enim numquam velit libero molestiae eveniet assumenda perspiciatis, tenetur neque. Eaque dolorem voluptas nisi minima eius ipsum eum.</p>
 
       <ul>
