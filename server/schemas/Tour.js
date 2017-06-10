@@ -17,7 +17,7 @@ const schema = {
   desc: {
     type: String,
     required: true,
-    validation: Joi.string().min(8)
+    validation: Joi.string()
   }
 
 };

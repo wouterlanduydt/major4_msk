@@ -3,7 +3,12 @@ import {observable, action} from 'mobx';
 class Store {
 
   @observable
-  name = `Zoek cultuur niet te ver`
+  selectedArtwork = {}
+
+  @action
+  setSelectedArtwork = artwork => {
+    this.selectedArtwork = artwork;
+  }
 
   @observable
   tours = [
@@ -1047,6 +1052,8 @@ class Store {
   getArtworkById = _id => {
     return this.artworks.find(a => a._id === parseInt(_id));
   }
+
+
 
 }
 
