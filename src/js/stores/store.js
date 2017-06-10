@@ -3,6 +3,7 @@ import {observable, action} from 'mobx';
 class Store {
 
   @observable
+<<<<<<< HEAD
   selectedArtwork = {}
 
   @action
@@ -11,6 +12,8 @@ class Store {
   }
 
   @observable
+=======
+>>>>>>> 04abbfdb536e1125d10c1bbf9c03f03b98bdc067
   tours = [
     {
       _id: 1,

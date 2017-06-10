@@ -23,7 +23,7 @@ const ArtworksMap = ({store}) => {
       </Link>
       <ArtDetail />
       <ReactMapboxGl
-        style='mapbox://styles/mapbox/light-v9'
+        style='mapbox://styles/wouterlanduydt/cj3r5guiy000c2rp6kzb1vcjw'
         accessToken='pk.eyJ1Ijoid291dGVybGFuZHV5ZHQiLCJhIjoiY2lwMTEyMnJ0MDBncXZrbTI3OHNkdXNhZCJ9.ygWvm76D7cOx3Ev3VLDYjw'
         center={[7.8774936, 47.1212712]}
         zoom={[5]}
