@@ -1,7 +1,7 @@
 //**** CHANGE ******************************************************//
 
 // pick the correct model (only change 'User')
-const {User: Model} = require(`mongoose`).models;
+const {Tour: Model} = require(`mongoose`).models;
 
 //******************************************************************//
 //******************************************************************//
