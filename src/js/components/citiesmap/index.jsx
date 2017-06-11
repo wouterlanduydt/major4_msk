@@ -6,12 +6,12 @@ import CityDetails from './CityDetails';
 
 const CitiesMap = ({store}) => {
 
-  const {cities} = store;
+  const {selectedCity} = store;
 
   return (
     <section>
-      <EuropeMap cities={cities} />
-      <CityDetails />
+      <EuropeMap />
+      <CityDetails {...selectedCity} />
 
       <Link to='/create/stats' >
         <p>Volgende</p>

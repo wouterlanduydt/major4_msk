@@ -11,6 +11,20 @@ class Store {
   }
 
   @observable
+  selectedCity = {}
+
+  @action
+  setSelectedCity = city => {
+    this.selectedCity = city;
+  }
+
+  // loved van die city
+  @action
+  toggleLove = city => {
+    console.log(city);
+  }
+
+  @observable
   tours = [
     {
       _id: 1,
@@ -1046,6 +1060,7 @@ class Store {
   @observable
   cities = [
     {
+      id: 1,
       name: `Athene`,
       country: `GR`,
       artStyle: `ancient greek art`,
@@ -1058,6 +1073,7 @@ class Store {
       loved: false
     },
     {
+      id: 2,
       name: `Londen`,
       country: `GB`,
       artStyle: `english art`,
@@ -1070,6 +1086,7 @@ class Store {
       loved: false
     },
     {
+      id: 3,
       name: `Berlijn`,
       country: `DU`,
       artStyle: `surrealisme`,
@@ -1082,6 +1099,7 @@ class Store {
       loved: false
     },
     {
+      id: 4,
       name: `Brussel`,
       country: `BE`,
       artStyle: `surrealisme`,
@@ -1094,6 +1112,7 @@ class Store {
       loved: false
     },
     {
+      id: 5,
       name: `Oostende`,
       country: `BE`,
       artStyle: `surrealisme`,
@@ -1106,6 +1125,7 @@ class Store {
       loved: false
     },
     {
+      id: 6,
       name: `Boedapest`,
       country: `HU`,
       artStyle: `art nouveau`,
@@ -1118,6 +1138,7 @@ class Store {
       loved: false
     },
     {
+      id: 7,
       name: `Praag`,
       country: `CR`,
       artStyle: `art nouveau`,
@@ -1130,6 +1151,7 @@ class Store {
       loved: false
     },
     {
+      id: 8,
       name: `Firenze`,
       country: `IT`,
       artStyle: `naturalisme`,
@@ -1142,6 +1164,7 @@ class Store {
       loved: false
     },
     {
+      id: 9,
       name: `Lissabon`,
       country: `PT`,
       artStyle: `naturalisme`,
@@ -1154,6 +1177,7 @@ class Store {
       loved: false
     },
     {
+      id: 10,
       name: `Milaan`,
       country: `IT`,
       artStyle: `renaissance`,
@@ -1166,6 +1190,7 @@ class Store {
       loved: false
     },
     {
+      id: 11,
       name: `Rome`,
       country: `IT`,
       artStyle: `barok`,
@@ -1178,6 +1203,7 @@ class Store {
       loved: false
     },
     {
+      id: 12,
       name: `Amsterdam`,
       country: `NL`,
       artStyle: `barok`,
@@ -1190,6 +1216,7 @@ class Store {
       loved: false
     },
     {
+      id: 13,
       name: `Venetië`,
       country: `IT`,
       artStyle: `mannerism`,
@@ -1202,6 +1229,7 @@ class Store {
       loved: false
     },
     {
+      id: 14,
       name: `Antwerpen`,
       country: `BE`,
       artStyle: `mannerism`,
@@ -1214,6 +1242,7 @@ class Store {
       loved: false
     },
     {
+      id: 15,
       name: `Istanbul`,
       country: `TU`,
       artStyle: `modernisme`,
@@ -1226,6 +1255,7 @@ class Store {
       loved: false
     },
     {
+      id: 16,
       name: `Barcelona`,
       country: `ES`,
       artStyle: `modernisme`,
@@ -1238,6 +1268,7 @@ class Store {
       loved: false
     },
     {
+      id: 17,
       name: `Kopenhagen`,
       country: `SW`,
       artStyle: `modernisme`,
@@ -1250,6 +1281,7 @@ class Store {
       loved: false
     },
     {
+      id: 18,
       name: `Madrid`,
       country: `ES`,
       artStyle: `modernisme`,
@@ -1262,6 +1294,7 @@ class Store {
       loved: false
     },
     {
+      id: 19,
       name: `Brugge`,
       country: `BE`,
       artStyle: `modernisme`,
@@ -1278,6 +1311,11 @@ class Store {
   @action
   getTourById = _id => {
     return this.tours.find(t => t._id === parseInt(_id));
+  }
+
+  @action
+  getCityById = id => {
+    return this.cities.find(c => c.id === parseInt(id));
   }
 
   @action

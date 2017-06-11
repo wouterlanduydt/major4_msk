@@ -1,23 +1,45 @@
 import React from 'react';
-import {PropTypes} from 'mobx-react';
+import {observer, inject, PropTypes} from 'mobx-react';
+import ReactMapboxGl, {Layer, Feature} from "react-mapbox-gl";
 
-const EuropeMap = ({cities}) => {
+const EuropeMap = ({store}) => {
+
+  const {cities, setSelectedCity, getCityById} = store;
+
+  const handleCityClick = args => {
+    const clickedCityId = parseInt(args.feature.layer.id);
+    const clickedCity = getCityById(clickedCityId);
+    setSelectedCity(clickedCity);
+  };
 
   return (
-    <ul>
+    <ReactMapboxGl
+      style='mapbox://styles/wouterlanduydt/cj3r5guiy000c2rp6kzb1vcjw'
+      accessToken='pk.eyJ1Ijoid291dGVybGFuZHV5ZHQiLCJhIjoiY2lwMTEyMnJ0MDBncXZrbTI3OHNkdXNhZCJ9.ygWvm76D7cOx3Ev3VLDYjw'
+      center={[7.8774936, 47.1212712]}
+      zoom={[3]}
+      minZoom={3}
+      maxZoom={3}
+      containerStyle={{height: `40vh`, width: `40vw`}}>
       {
         cities.map(
         c => (
-          <li key={c.name}>{c.name} {c.country} {c.artStyle} {c.artStyle_id} {c.nPainters} {c.nMusea} {c.distance} {c.lon} {c.lat}</li>
+          <Layer
+            type='symbol'
+            id={c.id.toString()}
+            key={c.id}
+            layout={{"icon-image": `marker-15`}}>
+            <Feature onClick={handleCityClick} coordinates={[c.lat, c.lon]} />
+          </Layer>
           )
         )
       }
-    </ul>
+    </ReactMapboxGl>
   );
 };
 
 EuropeMap.propTypes = {
-  cities: PropTypes.observableArray.isRequired
+  store: PropTypes.observableObject.isRequired
 };
 
-export default EuropeMap;
+export default inject(`store`)(observer(EuropeMap));
