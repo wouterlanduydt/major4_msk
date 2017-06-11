@@ -13,3 +13,27 @@ body {
 h1 {
   font-size: 3rem;
 }
+
+.hide {
+  display: none;
+}
+
+.map {
+
+  &_flex {
+    display: flex;
+  }
+
+  &_detail_container {
+    position: absolute;
+    left: 0;
+    width: 30vw;
+    z-index: 2;
+    height: 100vw;
+    background: white;
+  }
+
+  &_detail_image {
+    width: 100%;
+  }
+}

@@ -3,35 +3,40 @@ import {observable, action} from 'mobx';
 class Store {
 
   @observable
-<<<<<<< HEAD
   selectedArtwork = {}
+
+  @observable
+  detailShown = true;
 
   @action
   setSelectedArtwork = artwork => {
     this.selectedArtwork = artwork;
   }
 
+  @action
+  resetSelectedArtwork = () => {
+    this.selectedArtwork = {};
+  }
+
   @observable
-=======
->>>>>>> 04abbfdb536e1125d10c1bbf9c03f03b98bdc067
   tours = [
     {
       _id: 1,
       map: `tour1`,
       title: `Surreal tour`,
-      desc: `blablabla`
+      desc: `Surrealisme wil ervoor zorgen, dat je een andere kijk op de werkelijkheid krijgt. Het wil dat je de achterliggende betekenis achter het kunstwerk zoekt, en hieruit leert. Enkele voorbeelden van bekende surrealisten zijn: René Magritte, Max Ernst, Salvador Dali en Frida Kahlo.`
     },
     {
       _id: 2,
       map: `tour1`,
       title: `Modern tour`,
-      desc: `blablabla`
+      desc: `Modernisme is een kunstvorm dat tegen alle oude kunstvormen was, en zich wou focussen op de innovatie van de toenmalige tijd. Men experimenteerde met nieuwe vormen, technieken, materialen en technieken om kunstwerken te creëren dat de moderne samenleving weerspiegelde. Enkele voorbeelden van bekende Modernisten zijn: Raoul Hausmann, Robert Morris, Jackson Pollock en Georges Braque.`
     },
     {
       _id: 3,
       map: `tour1`,
       title: `Belgian tour`,
-      desc: `blablabla`
+      desc: `Ook hebben De belgen in het verleden een grote rol gespeeld in de kunstwereld. We zijn zelf zo trots op onze belgen, dat we speciaal een tour voor hen hebben gemaakt. De tour bestaat uit een gezonde variatie van verschillende stijlen en kunstenaars. Enkele voorbeelden van bekende Belgen zijn: Constant Permeke, James Ensor, Jan Verhas en Paul Delvaux.`
     },
     {
       _id: 4,
@@ -1055,8 +1060,6 @@ class Store {
   getArtworkById = _id => {
     return this.artworks.find(a => a._id === parseInt(_id));
   }
-
-
 
 }
 

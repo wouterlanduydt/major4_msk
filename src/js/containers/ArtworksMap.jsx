@@ -8,7 +8,7 @@ import ReactMapboxGl, {Layer, Feature} from "react-mapbox-gl";
 
 const ArtworksMap = ({store}) => {
 
-  const {artworks, getArtworkById, setSelectedArtwork} = store;
+  const {artworks, getArtworkById, setSelectedArtwork, resetSelectedArtwork} = store;
 
   const handleAnnotationClick = args => {
     const clickedAnnotationId = parseInt(args.feature.layer.id);
@@ -16,36 +16,42 @@ const ArtworksMap = ({store}) => {
     setSelectedArtwork(clickedArtwork);
   };
 
+  const handleBackClick = () => {
+    resetSelectedArtwork();
+  };
+
   return (
     <section>
       <Link to='/' >
-        <div>Terug</div>
+        <div onClick={handleBackClick}>Terug</div>
       </Link>
-      <ArtDetail />
-      <ReactMapboxGl
-        style='mapbox://styles/wouterlanduydt/cj3r5guiy000c2rp6kzb1vcjw'
-        accessToken='pk.eyJ1Ijoid291dGVybGFuZHV5ZHQiLCJhIjoiY2lwMTEyMnJ0MDBncXZrbTI3OHNkdXNhZCJ9.ygWvm76D7cOx3Ev3VLDYjw'
-        center={[7.8774936, 47.1212712]}
-        zoom={[5]}
-        minZoom={5}
-        maxZoom={6}
-        containerStyle={{height: `100vh`, width: `100vw`}}>
+      <div className='map_flex'>
+        <ArtDetail />
+        <ReactMapboxGl
+          style='mapbox://styles/wouterlanduydt/cj3r5guiy000c2rp6kzb1vcjw'
+          accessToken='pk.eyJ1Ijoid291dGVybGFuZHV5ZHQiLCJhIjoiY2lwMTEyMnJ0MDBncXZrbTI3OHNkdXNhZCJ9.ygWvm76D7cOx3Ev3VLDYjw'
+          center={[7.8774936, 47.1212712]}
+          zoom={[5]}
+          minZoom={5}
+          maxZoom={6}
+          containerStyle={{height: `100vh`, width: `100vw`}}>
 
-        {
-          artworks.map(
-          a => (
-            <Layer
-              type='symbol'
-              id={a._id.toString()}
-              key={a._id}
-              layout={{"icon-image": `marker-15`}}>
-              <Feature onClick={handleAnnotationClick} coordinates={[a.lat, a.lon]} />
-            </Layer>
+          {
+            artworks.map(
+            a => (
+              <Layer
+                type='symbol'
+                id={a._id.toString()}
+                key={a._id}
+                layout={{"icon-image": `marker-15`}}>
+                <Feature onClick={handleAnnotationClick} coordinates={[a.lat, a.lon]} />
+              </Layer>
+              )
             )
-          )
-        }
+          }
 
-      </ReactMapboxGl>
+        </ReactMapboxGl>
+      </div>
     </section>
   );
 };
