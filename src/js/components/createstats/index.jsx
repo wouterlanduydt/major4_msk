@@ -1,7 +1,11 @@
 import React from 'react';
+import {inject, observer, PropTypes} from 'mobx-react';
 import {Link} from 'react-router-dom';
 
-const CreateStats = () => {
+const CreateStats = ({store}) => {
+
+  const {nTotalDistance, nTotalPainters, nTotalCities} = store;
+
   return (
     <section>
 
@@ -14,9 +18,9 @@ const CreateStats = () => {
       </header>
 
       <ul>
-        <li>2432km reizen</li>
-        <li>door 4 verschillende landen</li>
-        <li>om 23 kunstenaars te zien</li>
+        <li>{nTotalDistance}km reizen</li>
+        <li>door {nTotalCities} verschillende steden</li>
+        <li>om {nTotalPainters} kunstenaars te zien</li>
       </ul>
 
       <p>Die je ook gewoon in het Museum voor Schone Kunsten kan bewonderen?</p>
@@ -29,4 +33,8 @@ const CreateStats = () => {
   );
 };
 
-export default CreateStats;
+CreateStats.propTypes = {
+  store: PropTypes.observableObject.isRequired
+};
+
+export default inject(`store`)(observer(CreateStats));

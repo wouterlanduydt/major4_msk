@@ -11,7 +11,7 @@ const Tours = ({tours}) => {
         <p>Terug</p>
       </Link>
 
-      <h1>Onze Tours</h1>
+      <h1>Onze Touren</h1>
       <p>Dit zijn alle tours die we bij het MSK in Gent te bieden hebben, ontdek welke voor jou het interessantst lijkt, door je eigen reis samen te stellen.</p>
       <ul>
         {

@@ -18,7 +18,6 @@ class App extends Component {
   renderEditProject = ({match}) => {
     const {id} = match.params;
     const {getTourById} = this.props.store;
-
     const tour = getTourById(id);
 
     return <TourDetail {...tour} />;
@@ -29,7 +28,12 @@ class App extends Component {
   }
 
   renderTourResult = () => {
-    return <TourResult />;
+    let {calculatedTour} = this.props.store;
+    const {calculateTourResult} = this.props.store;
+
+    calculatedTour = calculateTourResult();
+    console.log(calculatedTour);
+    return <TourResult {...calculatedTour} />;
   }
 
   render() {

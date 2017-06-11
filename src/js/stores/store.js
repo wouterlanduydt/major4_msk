@@ -1,4 +1,4 @@
-import {observable, action} from 'mobx';
+import {observable, action, computed} from 'mobx';
 
 class Store {
 
@@ -7,6 +7,17 @@ class Store {
 
   @observable
   detailShown = true;
+
+  @action
+  toggleKnowMore = buttonText => {
+    if (this.detailShown) {
+      this.detailShown = false;
+      buttonText.innerHTML = `Verberg`;
+    } else {
+      this.detailShown = true;
+      buttonText.innerHTML = `Ontdek meer`;
+    }
+  }
 
   @action
   setSelectedArtwork = artwork => {
@@ -50,7 +61,7 @@ class Store {
       _id: 3,
       map: `tour1`,
       title: `Belgian tour`,
-      desc: `Ook hebben De belgen in het verleden een grote rol gespeeld in de kunstwereld. We zijn zelf zo trots op onze belgen, dat we speciaal een tour voor hen hebben gemaakt. De tour bestaat uit een gezonde variatie van verschillende stijlen en kunstenaars. Enkele voorbeelden van bekende Belgen zijn: Constant Permeke, James Ensor, Jan Verhas en Paul Delvaux.`
+      desc: `Ook hebben De Belgen in het verleden een grote rol gespeeld in de kunstwereld. We zijn zelf zo trots op onze Belgen, dat we speciaal een tour voor hen hebben gemaakt. De tour bestaat uit een gezonde variatie van verschillende stijlen en kunstenaars. Enkele voorbeelden van bekende Belgen zijn: Constant Permeke, James Ensor, Jan Verhas en Paul Delvaux.`
     },
     {
       _id: 4,
@@ -1315,6 +1326,112 @@ class Store {
       loved: false
     }
   ]
+
+  @observable
+  lovedCities = [
+    {
+      id: 1,
+      name: `Athene`,
+      country: `GR`,
+      artStyle: `ancient greek art`,
+      artStyleId: 1,
+      nPainters: 25,
+      nMusea: 5,
+      distance: 2888,
+      lon: 51.2472393,
+      lat: 4.4403471,
+      loved: true
+    },
+    {
+      id: 2,
+      name: `Londen`,
+      country: `GB`,
+      artStyle: `english art`,
+      artStyleId: 2,
+      nPainters: 34,
+      nMusea: 5,
+      distance: 323,
+      lon: 51.5285578,
+      lat: - 0.2420434,
+      loved: true
+    },
+    {
+      id: 3,
+      name: `Berlijn`,
+      country: `DU`,
+      artStyle: `surrealisme`,
+      artStyleId: 3,
+      nPainters: 31,
+      nMusea: 4,
+      distance: 780,
+      lon: 52.5072095,
+      lat: 13.1452839,
+      loved: true
+    },
+    {
+      id: 4,
+      name: `Brussel`,
+      country: `BE`,
+      artStyle: `surrealisme`,
+      artStyleId: 3,
+      nPainters: 16,
+      nMusea: 6,
+      distance: 56,
+      lon: 50.854954,
+      lat: 4.3051789,
+      loved: false
+    },
+    {
+      id: 5,
+      name: `Oostende`,
+      country: `BE`,
+      artStyle: `surrealisme`,
+      artStyleId: 3,
+      nPainters: 22,
+      nMusea: 6,
+      distance: 61,
+      lon: 51.214119,
+      lat: 2.8515519,
+      loved: false
+    }
+  ]
+
+  @computed
+  get nTotalDistance() {
+    let totalDistance = 0;
+    this.lovedCities.forEach(l => totalDistance = totalDistance + l.distance);
+    return totalDistance;
+  }
+
+  @computed
+  get nTotalPainters() {
+    let totalPainters = 0;
+    this.lovedCities.forEach(l => totalPainters = totalPainters + l.nPainters);
+    return totalPainters;
+  }
+
+  @computed
+  get nTotalCities() {
+    return this.lovedCities.length;
+  }
+
+  @computed
+  get nBelgianCities() {
+    let countBelgianCities = 0;
+    this.lovedCities.forEach(l => (l.country === `BE`) ? countBelgianCities ++ : ``);
+    return countBelgianCities;
+  }
+
+  calculateTourResult = () => {
+    if (this.nBelgianCities >= 2) {
+      return this.getTourById(3);
+    } else if (this.nTotalDistance > 3000) {
+      return this.getTourById(4);
+    }
+  }
+
+  @observable
+  calculatedTour = {};
 
   @action
   getTourById = _id => {

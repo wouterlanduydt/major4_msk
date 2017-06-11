@@ -9,9 +9,7 @@ const ArtworksMap = ({store}) => {
 
   const {resetSelectedArtwork, selectedArtwork} = store;
 
-  const handleBackClick = () => {
-    resetSelectedArtwork();
-  };
+  const handleBackClick = () => resetSelectedArtwork();
 
   return (
     <section>
