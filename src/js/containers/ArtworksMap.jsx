@@ -7,12 +7,16 @@ import MapboxMap from '../components/map';
 
 const ArtworksMap = ({store}) => {
 
-  const {selectedArtwork} = store;
+  const {resetSelectedArtwork, selectedArtwork} = store;
+
+  const handleBackClick = () => {
+    resetSelectedArtwork();
+  };
 
   return (
     <section>
       <Link to='/' >
-        <div>Terug</div>
+        <div onClick={handleBackClick}>Terug</div>
       </Link>
       <ArtDetail {...selectedArtwork} />
       <MapboxMap />

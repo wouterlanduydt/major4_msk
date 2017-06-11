@@ -11,9 +11,8 @@ const Tours = ({tours}) => {
         <p>Terug</p>
       </Link>
 
-      <h1>Onze Touren</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias rerum a quos enim numquam velit libero molestiae eveniet assumenda perspiciatis, tenetur neque. Eaque dolorem voluptas nisi minima eius ipsum eum.</p>
-
+      <h1>Onze Tours</h1>
+      <p>Dit zijn alle tours die we bij het MSK in Gent te bieden hebben, ontdek welke voor jou het interessantst lijkt, door je eigen reis samen te stellen.</p>
       <ul>
         {
           tours.map(

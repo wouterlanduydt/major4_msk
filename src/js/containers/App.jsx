@@ -54,6 +54,7 @@ class App extends Component {
 }
 
 App.propTypes = {
+
   store: object.isRequired
 };
 
