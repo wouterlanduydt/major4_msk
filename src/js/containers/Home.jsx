@@ -14,7 +14,7 @@ const Home = () => {
           <li>Stel je reis samen</li>
         </Link>
         <Link to='/tours' >
-          <li>Ontdek de tours</li>
+          <li>Ontdek de touren</li>
         </Link>
         <Link to='/map' >
           <li>Op de kaart</li>

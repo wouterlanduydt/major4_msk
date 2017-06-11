@@ -33,25 +33,25 @@ const schema = {
   },
 
   lon: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.number()
   },
 
   lat: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.number()
   },
 
   country: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.string().min(2).max(3)
   },
 
   desc: {
-    type: String,
+    type: Number,
     required: true,
     validation: Joi.string().min(10)
   },

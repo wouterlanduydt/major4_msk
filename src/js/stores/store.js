@@ -123,7 +123,7 @@ class Store {
       lon: 51.2603017,
       lat: 4.2304527,
       country: `BE`,
-      desc: `Naast Peter Paul Rubens was Jacob Jordaens een van de meest productieve talenten van zijn tijd. Het altaarstuk Maria-Tenhemelopneming draagt rechts onder een half uitgewist wapenschild en de inscriptie ‘Dono Dedit V.D. Venne’, wat verwijst naar de familie Van de Venne als schenkers. De compositie gaat bijna letterlijk terug op de Maria-Tenhemelopneming die Rubens in 1624 voor de kathedraal van Antwerpen schilderde. De Gentse versie van Jordaens dateert van 1650- 1655. Kenmerkend voor het oeuvre van de Antwerpse meester uit die periode zijn de schematiserende vormgeving en de enigszins stereotiepe houdingen en gebaren. In een van de apostelen rechts op het doek is vermoedelijk de figuur van Abraham Grapheus te herkennen. Van de rustieke kop van Grapheus maakte Jordaens verscheidene olieverfstudies. Een ervan bevindt zich in de verzameling van het Museum.`
+      desc: `Naast Peter Paul Rubens was Jacob Jordaens een van de meest productieve talenten van zijn tijd. Het altaarstuk Maria-Tenhemelopneming draagt rechts onder een half uitgewist wapenschild en de inscriptie ‘Dono Dedit V.D. Venne’, wat verwijst naar de familie Van de Venne als schenkers. De compositie gaat bijna letterlijk terug op de Maria-Tenhemelopneming die Rubens in 1624 voor de kathedraal van Antwerpen schilderde. De Gentse versie van Jordaens dateert van 1650-1655. Kenmerkend voor het oeuvre van de Antwerpse meester uit die periode zijn de schematiserende vormgeving en de enigszins stereotiepe houdingen en gebaren. In een van de apostelen rechts op het doek is vermoedelijk de figuur van Abraham Grapheus te herkennen. Van de rustieke kop van Grapheus maakte Jordaens verscheidene olieverfstudies. Een ervan bevindt zich in de verzameling van het Museum.`
     },
     {
       _id: 7,
@@ -1048,6 +1048,238 @@ class Store {
       lat: 7.1031645,
       country: `CHE`,
       desc: `Studie naar het Lam Gods van Jan Van Eyck`
+    }
+  ]
+
+  @observable
+  cities = [
+    {
+      name: `Athene`,
+      country: `GR`,
+      artStyle: `ancient greek art`,
+      artStyleId: 1,
+      nPainters: 25,
+      nMusea: 5,
+      distance: 2888,
+      lon: 51.2472393,
+      lat: 4.4403471,
+      loved: false
+    },
+    {
+      name: `Londen`,
+      country: `GB`,
+      artStyle: `english art`,
+      artStyleId: 2,
+      nPainters: 34,
+      nMusea: 5,
+      distance: 323,
+      lon: 51.5285578,
+      lat: - 0.2420434,
+      loved: false
+    },
+    {
+      name: `Berlijn`,
+      country: `DU`,
+      artStyle: `surrealisme`,
+      artStyleId: 3,
+      nPainters: 31,
+      nMusea: 4,
+      distance: 780,
+      lon: 52.5072095,
+      lat: 13.1452839,
+      loved: false
+    },
+    {
+      name: `Brussel`,
+      country: `BE`,
+      artStyle: `surrealisme`,
+      artStyleId: 3,
+      nPainters: 16,
+      nMusea: 6,
+      distance: 56,
+      lon: 50.854954,
+      lat: 4.3051789,
+      loved: false
+    },
+    {
+      name: `Oostende`,
+      country: `BE`,
+      artStyle: `surrealisme`,
+      artStyleId: 3,
+      nPainters: 22,
+      nMusea: 6,
+      distance: 61,
+      lon: 51.214119,
+      lat: 2.8515519,
+      loved: false
+    },
+    {
+      name: `Boedapest`,
+      country: `HU`,
+      artStyle: `art nouveau`,
+      artStyleId: 4,
+      nPainters: 12,
+      nMusea: 5,
+      distance: 1410,
+      lon: 47.4811277,
+      lat: 18.9898773,
+      loved: false
+    },
+    {
+      name: `Praag`,
+      country: `CR`,
+      artStyle: `art nouveau`,
+      artStyleId: 4,
+      nPainters: 15,
+      nMusea: 4,
+      distance: 944,
+      lon: 50.0595849,
+      lat: 14.3251985,
+      loved: false
+    },
+    {
+      name: `Firenze`,
+      country: `IT`,
+      artStyle: `naturalisme`,
+      artStyleId: 5,
+      nPainters: 12,
+      nMusea: 2,
+      distance: 1270,
+      lon: 43.8454148,
+      lat: 10.9511735,
+      loved: false
+    },
+    {
+      name: `Lissabon`,
+      country: `PT`,
+      artStyle: `naturalisme`,
+      artStyleId: 5,
+      nPainters: 36,
+      nMusea: 3,
+      distance: 2023,
+      lon: 38.7436214,
+      lat: - 9.195309,
+      loved: false
+    },
+    {
+      name: `Milaan`,
+      country: `IT`,
+      artStyle: `renaissance`,
+      artStyleId: 6,
+      nPainters: 11,
+      nMusea: 2,
+      distance: 967,
+      lon: 45.4534839,
+      lat: 8.8479788,
+      loved: false
+    },
+    {
+      name: `Rome`,
+      country: `IT`,
+      artStyle: `barok`,
+      artStyleId: 7,
+      nPainters: 19,
+      nMusea: 6,
+      distance: 1540,
+      lon: 41.9099856,
+      lat: 12.3955714,
+      loved: false
+    },
+    {
+      name: `Amsterdam`,
+      country: `NL`,
+      artStyle: `barok`,
+      artStyleId: 7,
+      nPainters: 34,
+      nMusea: 4,
+      distance: 226,
+      lon: 52.3745287,
+      lat: 4.7581892,
+      loved: false
+    },
+    {
+      name: `Venetië`,
+      country: `IT`,
+      artStyle: `mannerism`,
+      artStyleId: 8,
+      nPainters: 8,
+      nMusea: 6,
+      distance: 1228,
+      lon: 45.4055776,
+      lat: 12.2413166,
+      loved: false
+    },
+    {
+      name: `Antwerpen`,
+      country: `BE`,
+      artStyle: `mannerism`,
+      artStyleId: 8,
+      nPainters: 17,
+      nMusea: 2,
+      distance: 59,
+      lon: 51.2603011,
+      lat: 4.2301098,
+      loved: false
+    },
+    {
+      name: `Istanbul`,
+      country: `TU`,
+      artStyle: `modernisme`,
+      artStyleId: 9,
+      nPainters: 26,
+      nMusea: 5,
+      distance: 2733,
+      lon: 41.0049806,
+      lat: 28.7313113,
+      loved: false
+    },
+    {
+      name: `Barcelona`,
+      country: `ES`,
+      artStyle: `modernisme`,
+      artStyleId: 9,
+      nPainters: 12,
+      nMusea: 2,
+      distance: 1322,
+      lon: 41.3947687,
+      lat: 2.0785565,
+      loved: false
+    },
+    {
+      name: `Kopenhagen`,
+      country: `SW`,
+      artStyle: `modernisme`,
+      artStyleId: 9,
+      nPainters: 11,
+      nMusea: 3,
+      distance: 941,
+      lon: 55.6712473,
+      lat: 12.4906279,
+      loved: false
+    },
+    {
+      name: `Madrid`,
+      country: `ES`,
+      artStyle: `modernisme`,
+      artStyleId: 9,
+      nPainters: 19,
+      nMusea: 2,
+      distance: 1574,
+      lon: 40.4168355,
+      lat: - 3.7388097,
+      loved: false
+    },
+    {
+      name: `Brugge`,
+      country: `BE`,
+      artStyle: `modernisme`,
+      artStyleId: 9,
+      nPainters: 9,
+      nMusea: 6,
+      distance: 50,
+      lon: 51.2605833,
+      lat: 3.0820626,
+      loved: false
     }
   ]
 
