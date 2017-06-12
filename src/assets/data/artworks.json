@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "image": "",
+    "image": "img12",
     "painter": "Alberto Giacometti",
     "name": "Landschap",
     "period": "20e eeuw",
@@ -37,7 +37,7 @@
   },
   {
     "id": 3,
-    "image": "",
+    "image": "img01",
     "painter": "Rik Wouters",
     "name": "Zittende vrouw bij het venster",
     "period": "1915",
@@ -217,7 +217,7 @@
   },
   {
     "id": 18,
-    "image": "",
+    "image": "img02",
     "painter": "Odilon Redon",
     "name": "Een man van het volk",
     "period": "ca. 1887",
@@ -253,7 +253,7 @@
   },
   {
     "id": 21,
-    "image": "",
+    "image": "img03",
     "painter": "Gaspar de Crayer",
     "name": "Het oordeel van Salomo",
     "period": "ca.1620-1622",
@@ -265,7 +265,7 @@
   },
   {
     "id": 22,
-    "image": "",
+    "image": "img04",
     "painter": "Jacques Louis David",
     "name": "Drie vrouwen",
     "period": "19e eeuw",
@@ -277,7 +277,7 @@
   },
   {
     "id": 23,
-    "image": "",
+    "image": "img05",
     "painter": "Philippe de Champaigne",
     "name": "Portret van bisschop Jean-Pierre Cannus",
     "period": "1643",
@@ -337,7 +337,7 @@
   },
   {
     "id": 28,
-    "image": "",
+    "image": "img06",
     "painter": "Max Ernst",
     "name": "Vegetatie",
     "period": "1925",
@@ -385,7 +385,7 @@
   },
   {
     "id": 32,
-    "image": "",
+    "image": "img07",
     "painter": "Jean François Millet",
     "name": "De heilige Familie",
     "period": "1913",
@@ -577,7 +577,7 @@
   },
   {
     "id": 48,
-    "image": "",
+    "image": "img08",
     "painter": "James Whistler",
     "name": "The little Lagoon",
     "period": "1878",
@@ -589,7 +589,7 @@
   },
   {
     "id": 49,
-    "image": "",
+    "image": "img09",
     "painter": "William Hogarth",
     "name": "Portret van een jonge vrouw",
     "period": "18e eeuw",
@@ -709,7 +709,7 @@
   },
   {
     "id": 59,
-    "image": "",
+    "image": "img10",
     "painter": "James Ensor",
     "name": "De intrede in Jeruzalem",
     "period": "1885",
@@ -733,7 +733,7 @@
   },
   {
     "id": 61,
-    "image": "",
+    "image": "img11",
     "painter": "Henri Le Sidaner",
     "name": "De tafel in de witte tuin te Gerberoy",
     "period": "1906",
@@ -769,7 +769,7 @@
   },
   {
     "id": 64,
-    "image": "",
+    "image": "img13",
     "painter": "Édouard Manet",
     "name": "De zigeuners",
     "period": "1862",
@@ -841,7 +841,7 @@
   },
   {
     "id": 70,
-    "image": "",
+    "image": "img14",
     "painter": "Honoré Daumier",
     "name": "De verzamelaars van prenten",
     "period": "1824",
@@ -853,7 +853,7 @@
   },
   {
     "id": 71,
-    "image": "",
+    "image": "img15",
     "painter": "Maurice Denis",
     "name": "Amour",
     "period": "19e eeuw",
@@ -865,7 +865,7 @@
   },
   {
     "id": 72,
-    "image": "",
+    "image": "img16",
     "painter": "Philippe de Champaigne",
     "name": "De Emmaüsgangers",
     "period": "1664",
@@ -877,7 +877,7 @@
   },
   {
     "id": 73,
-    "image": "",
+    "image": "img17",
     "painter": "Théodore Géricault",
     "name": "Portret van een kleptomaan",
     "period": "1820",
@@ -889,7 +889,7 @@
   },
   {
     "id": 74,
-    "image": "",
+    "image": "img18",
     "painter": "Filippo Della Valle",
     "name": "Borstbeeld van Paus Clemens XII",
     "period": "18e eeuw",
@@ -961,7 +961,7 @@
   },
   {
     "id": 80,
-    "image": "",
+    "image": "img19",
     "painter": "Tintoretto",
     "name": "Portret van Giovanni Paolo Cornaro",
     "period": "1561",
