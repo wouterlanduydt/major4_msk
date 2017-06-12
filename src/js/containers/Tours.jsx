@@ -19,7 +19,7 @@ const Tours = ({tours}) => {
           t => (
             <Tour
               {...t}
-              key={t._id}
+              key={t.id}
             />
             )
           )

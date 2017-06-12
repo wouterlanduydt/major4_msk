@@ -4,7 +4,7 @@ import {string, number} from 'prop-types';
 import {Link} from 'react-router-dom';
 import {observer} from 'mobx-react';
 
-const Tour = ({map, title, desc, _id}) => {
+const Tour = ({map, title, desc, id}) => {
   return (
     <li>
       <img src={`../../../assets/svg/${map}.svg`} alt={`${map}`} />
@@ -13,7 +13,7 @@ const Tour = ({map, title, desc, _id}) => {
       </header>
       <p>{desc}</p>
 
-      <Link to={`tour/${_id}`} >
+      <Link to={`tour/${id}`} >
         <p>Ontdek meer</p>
       </Link>
 
@@ -25,7 +25,7 @@ Tour.propTypes = {
   map: string.isRequired,
   title: string.isRequired,
   desc: string.isRequired,
-  _id: number.isRequired
+  id: number.isRequired
 };
 
 export default observer(Tour);

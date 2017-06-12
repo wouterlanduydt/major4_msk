@@ -27,8 +27,8 @@ const MapboxMap = ({store}) => {
         a => (
           <Layer
             type='symbol'
-            id={a._id.toString()}
-            key={a._id}
+            id={a.id.toString()}
+            key={a.id}
             layout={{"icon-image": `marker-15`}}>
             <Feature onClick={handleAnnotationClick} coordinates={[a.lat, a.lon]} />
           </Layer>

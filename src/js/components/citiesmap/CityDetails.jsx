@@ -1,14 +1,13 @@
 import React from 'react';
 import {inject, observer, PropTypes} from 'mobx-react';
-import {string, number, bool} from 'prop-types';
+import {string, number} from 'prop-types';
 
-const CityDetails = ({id, name, nMusea, nPainters, distance, loved, store}) => {
+const CityDetails = ({id, name, nMusea, nPainters, distance, store}) => {
 
-  const {getCityById, toggleLove} = store;
+  const {addLoved} = store;
 
-  const handleChange = () => {
-    const city = getCityById(id);
-    toggleLove(city);
+  const handleAddLoved = () => {
+    addLoved(id);
   };
 
   return (
@@ -17,12 +16,7 @@ const CityDetails = ({id, name, nMusea, nPainters, distance, loved, store}) => {
           <h1>{name}</h1>
         </header>
         <p>{distance} km</p>
-        <input
-          type='checkbox'
-          value='like'
-          onChange={handleChange}
-          checked={loved}
-         />
+        <button onClick={handleAddLoved}>Hier wil ik naartoe!</button>
         <ul>
           <li>{nMusea} musea</li>
           <li>{nPainters} kunstenaars</li>
@@ -43,7 +37,6 @@ CityDetails.propTypes = {
   nMusea: number,
   nPainters: number,
   distance: number,
-  loved: bool,
   store: PropTypes.observableObject.isRequired
 };
 

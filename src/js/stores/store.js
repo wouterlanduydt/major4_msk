@@ -27,6 +27,17 @@ class Store {
     citiesData.forEach(a => this.cities.push(new City(a)));
   }
 
+  @action
+  addLoved = id => {
+    const city = this.getCityById(id);
+    this.lovedCities.includes(city) ? `` : this.lovedCities.push(city);
+  }
+
+  @action
+  deleteLovedCity = id => {
+    this.lovedCities = this.lovedCities.filter(l => l.id !== id);
+  }
+
   @observable
   selectedArtwork = {}
 
@@ -60,12 +71,6 @@ class Store {
   @action
   setSelectedCity = city => {
     this.selectedCity = city;
-  }
-
-  // loved van die city
-  @action
-  toggleLove = city => {
-    console.log(city);
   }
 
   @computed
