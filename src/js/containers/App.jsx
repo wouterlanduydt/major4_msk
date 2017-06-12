@@ -9,7 +9,7 @@ import Home from './Home';
 import Create from './Create';
 import Tours from './Tours';
 import ArtworksMap from './ArtworksMap';
-import CreateStats from '../components/createstats/';
+import CreateStats from '../components/createstats';
 import TourResult from '../components/tourresult';
 import TourDetail from '../components/tour/TourDetail';
 
@@ -23,6 +23,11 @@ class App extends Component {
     return <TourDetail {...tour} />;
   };
 
+  loadData = () => {
+    const {addData} = this.props.store;
+    addData();
+  }
+
   renderCreateStats = () => {
     return <CreateStats />;
   }
@@ -30,9 +35,7 @@ class App extends Component {
   renderTourResult = () => {
     let {calculatedTour} = this.props.store;
     const {calculateTourResult} = this.props.store;
-
     calculatedTour = calculateTourResult();
-    console.log(calculatedTour);
     return <TourResult {...calculatedTour} />;
   }
 
@@ -40,6 +43,7 @@ class App extends Component {
     return (
       <section>
         {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
+        {this.loadData()}
 
         <Switch>
           <Route exact path='/' component={Home} />
@@ -58,7 +62,6 @@ class App extends Component {
 }
 
 App.propTypes = {
-
   store: object.isRequired
 };
 
