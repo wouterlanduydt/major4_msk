@@ -23,7 +23,7 @@ class App extends Component {
     return <TourDetail {...tour} />;
   };
 
-  loadData = () => {
+  componentDidMount() {
     const {addData} = this.props.store;
     addData();
   }
@@ -43,7 +43,6 @@ class App extends Component {
     return (
       <section>
         {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
-        {this.loadData()}
 
         <Switch>
           <Route exact path='/' component={Home} />

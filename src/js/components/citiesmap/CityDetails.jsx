@@ -10,25 +10,32 @@ const CityDetails = ({id, name, nMusea, nPainters, distance, store}) => {
     addLoved(id);
   };
 
-  return (
-      <section>
-        <header>
-          <h1>{name}</h1>
-        </header>
-        <p>{distance} km</p>
-        <button onClick={handleAddLoved}>Hier wil ik naartoe!</button>
-        <ul>
-          <li>{nMusea} musea</li>
-          <li>{nPainters} kunstenaars</li>
-
-          {/* Lijst van de kunstenaars */}
+  if (name === ``) {
+    return <p>Klik op een stad voor meer info</p>;
+  } else {
+    return (
+        <section>
+          <header>
+            <h1>{name}</h1>
+          </header>
+          <p>{distance} km</p>
+          <button onClick={handleAddLoved}>Hier wil ik naartoe!</button>
           <ul>
-            <li></li>
-            <li></li>
+            <li>{nMusea} musea</li>
+            <li>{nPainters} kunstenaars</li>
+
+            {/* Lijst van de kunstenaars */}
+            <li>
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+
           </ul>
-        </ul>
-      </section>
-  );
+        </section>
+    );
+  }
 };
 
 CityDetails.propTypes = {
@@ -42,7 +49,7 @@ CityDetails.propTypes = {
 
 CityDetails.defaultProps = {
   id: 0,
-  name: `Stad`,
+  name: ``,
   nMusea: 0,
   nPainters: 0,
   distance: 0,

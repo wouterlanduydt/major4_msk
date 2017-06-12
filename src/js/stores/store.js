@@ -30,12 +30,21 @@ class Store {
   @action
   addLoved = id => {
     const city = this.getCityById(id);
-    this.lovedCities.includes(city) ? `` : this.lovedCities.push(city);
+    if (this.lovedCities.includes(city) || this.lovedCities.length >= 3) {
+      return;
+    } else {
+      this.lovedCities.push(city);
+    }
   }
 
   @action
   deleteLovedCity = id => {
     this.lovedCities = this.lovedCities.filter(l => l.id !== id);
+  }
+
+  @action
+  clearLovedCities = () => {
+    this.lovedCities = [];
   }
 
   @observable
@@ -99,11 +108,29 @@ class Store {
     return countBelgianCities;
   }
 
+  @computed
+  get mostSelectedArtstyle() {
+    const artStyleIdArray = this.lovedCities.map(l => l.artStyleId);
+    return artStyleIdArray.sort((a, b) =>
+          artStyleIdArray.filter(v => v === a).length
+        - artStyleIdArray.filter(v => v === b).length
+    ).pop();
+  }
+
   calculateTourResult = () => {
-    if (this.nBelgianCities >= 2) {
+    console.log(this.mostSelectedArtstyle);
+    if (this.nBelgianCities >= 1) {
       return this.getTourById(2);
-    } else if (this.nTotalDistance > 3000) {
+    } else if (this.nTotalDistance > 3800) {
       return this.getTourById(3);
+    } else if (this.mostSelectedArtstyle === 3) {
+      return this.getTourById(0);
+    } else if (this.mostSelectedArtstyle === 5) {
+      return this.getTourById(4);
+    } else if (this.mostSelectedArtstyle === 9) {
+      return this.getTourById(1);
+    } else {
+      return this.getTourById(1);
     }
   }
 
