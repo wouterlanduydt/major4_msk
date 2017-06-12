@@ -13,20 +13,24 @@ const ArtDetail = ({name, painter, city, period, desc, image, store}) => {
     toggleKnowMore($moreButton);
   };
 
-  return (
-    <article>
-      <img src={`../../../assets/img/${image}.jpg`} alt={`${image}`} />
-      <header>
-        <h1>{name}</h1>
-      </header>
-      <p>{painter}</p>
-      <div className={classNames({hidden: detailShown})} >
-        <p>{city}, {period}</p>
-        <p>{desc}</p>
-      </div>
-      <button ref={$el => $moreButton = $el} onClick={handleClickMore}>Ontdek Meer</button>
-    </article>
-  );
+  if (name === ``) {
+    return <p>Klik een kunstwerk aan</p>;
+  } else {
+    return (
+      <article>
+        <img src={`../../../assets/img/${image}.jpg`} alt={`${image}`} />
+        <header>
+          <h1>{name}</h1>
+        </header>
+        <p>{painter}</p>
+        <div className={classNames({hidden: detailShown})} >
+          <p>{city}, {period}</p>
+          <p>{desc}</p>
+        </div>
+        <button ref={$el => $moreButton = $el} onClick={handleClickMore}>Ontdek Meer</button>
+      </article>
+    );
+  }
 
 };
 
