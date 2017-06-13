@@ -48,33 +48,6 @@ class Store {
   }
 
   @observable
-  selectedArtwork = {}
-
-  @observable
-  detailShown = true;
-
-  @action
-  toggleKnowMore = buttonText => {
-    if (this.detailShown) {
-      this.detailShown = false;
-      buttonText.innerHTML = `Verberg`;
-    } else {
-      this.detailShown = true;
-      buttonText.innerHTML = `Ontdek meer`;
-    }
-  }
-
-  @action
-  setSelectedArtwork = artwork => {
-    this.selectedArtwork = artwork;
-  }
-
-  @action
-  resetSelectedArtwork = () => {
-    this.selectedArtwork = {};
-  }
-
-  @observable
   selectedCity = {}
 
   @action
