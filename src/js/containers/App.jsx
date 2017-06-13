@@ -8,7 +8,6 @@ import {Route, Switch} from 'react-router-dom';
 import Home from './Home';
 import Create from './Create';
 import Tours from './Tours';
-import ArtworksMap from './ArtworksMap';
 import CreateStats from '../components/createstats';
 import TourResult from '../components/tourresult';
 import TourDetail from '../components/tour/TourDetail';
@@ -51,7 +50,6 @@ class App extends Component {
           <Route exact path='/create/result' render={this.renderTourResult} />
           <Route exact path='/tours' component={Tours} />
           <Route path='/tour/:id' render={this.renderEditProject} />
-          <Route exact path='/map' component={ArtworksMap} />
         </Switch>
 
       </section>

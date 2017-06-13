@@ -13,12 +13,9 @@ const Home = () => {
         <Link to='/tours' >
           <li>Ontdek de touren</li>
         </Link>
-        <Link to='/map' >
-          <li>Op de kaart</li>
-        </Link>
       </ul>
       <Link to='/create' >
-        <button>Stel je cultuurtrip samen</button>
+        <button className='homepage__create-btn'>Stel je reis samen</button>
       </Link>
     </section>
   );

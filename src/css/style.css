@@ -1,19 +1,33 @@
 @import 'reset';
 @import 'vars';
 
-html {
-  background-color: var(--bg-color);
-}
-
 body {
-  font-family: Roboto;
+  font-family: Verdana;
   font-size: 1.6rem;
-}
-
-h1 {
-  font-size: 3rem;
 }
 
 .hidden {
   display: none;
+}
+
+.homepage {
+
+  &__create-btn {
+    border-radius: 0;
+    box-shadow: none;
+    background: color(red a(.6));
+    border: 1px solid red;
+    font-size: 3rem;
+    padding: 1.5rem 8rem 1.5rem 3rem;
+    text-transform: uppercase;
+    color: white;
+
+    &:hover {
+      background: color(red a(.7));
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
