@@ -13,6 +13,7 @@ const {ifProduction} = getIfUtils(process.env.NODE_ENV);
 const extractCSS = new ExtractTextWebpackPlugin(`css/style.css`);
 
 // change for production build on different server path
+// /wouter.landuydt/20162017/ma4/msk/
 const publicPath = `/`;
 
 const copy = new CopyWebpackPlugin([{

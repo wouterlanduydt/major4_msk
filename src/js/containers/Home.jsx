@@ -4,18 +4,17 @@ import {Link} from 'react-router-dom';
 const Home = () => {
 
   return (
-    <section>
+    <section className='homepage'>
       <header>
-        <h1>Zoek cultuur niet te ver</h1>
+        <h1 className='homepage__title'>Zoek cultuur <br />niet te ver</h1>
+        <h2 className='homepage__subtitle'>Ontdek jouw perfecte cultuurtrip.<br />Stel hier je reis samen.</h2>
       </header>
-      <p>Naar welke steden zou jij willen reizen? Hou je van cultuur, en wil je hier graag alles over weten? Stel je reis samen, en ontdek wat jou perfecte cultuurtrip zou zijn.</p>
-      <ul>
-        <Link to='/tours' >
-          <li>Ontdek de touren</li>
-        </Link>
-      </ul>
+      <p className='homepage__introtext'>Reis je graag en hou je van cultuur? Zou je graag alles willen weten over bekende kunstenaars en hun kunstwerken?</p>
+      <Link to='/tours' >
+        <p className='homepage__discover-btn'>Ontdek de touren</p>
+      </Link>
       <Link to='/create' >
-        <button className='homepage__create-btn'>Stel je reis samen</button>
+        <button className='homepage__create-btn'>Stel je cultuurtrip samen</button>
       </Link>
     </section>
   );

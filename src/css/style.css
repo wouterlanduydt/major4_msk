@@ -2,15 +2,41 @@
 @import 'vars';
 
 body {
-  font-family: Verdana;
+  font-family: Verdana, Geneva, sans-serif;
   font-size: 1.6rem;
+  color: var(--dark-color);
 }
 
 .hidden {
   display: none;
 }
 
+button {
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .homepage {
+
+  &__title {
+    font-size: 5rem;
+    font-family: denmark;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  &__subtitle {
+    font-size: 2.7rem;
+    border-left: .1rem solid red;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__introtext {
+    font-size: 2.2rem;
+  }
 
   &__create-btn {
     border-radius: 0;
@@ -24,10 +50,6 @@ body {
 
     &:hover {
       background: color(red a(.7));
-    }
-
-    &:focus {
-      outline: none;
     }
   }
 }
