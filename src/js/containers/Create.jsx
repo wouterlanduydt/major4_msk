@@ -5,16 +5,12 @@ import CitiesMap from '../components/citiesmap/';
 
 const Create = () => {
   return (
-    <section>
+    <section className='create'>
       <Link to='/' >
-        <p>Terug</p>
+        <span className='create__back-btn'>Terug</span>
       </Link>
-      <header>
-        <h1>Welke steden vind je interessant?</h1>
-      </header>
       <CitiesMap />
     </section>
-
   );
 };
 

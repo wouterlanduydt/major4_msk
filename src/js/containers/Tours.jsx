@@ -6,7 +6,7 @@ import Tour from '../components/tour';
 
 const Tours = ({tours}) => {
   return (
-    <div>
+    <section>
       <Link to='/' >
         <p>Terug</p>
       </Link>
@@ -25,7 +25,7 @@ const Tours = ({tours}) => {
           )
         }
       </ul>
-    </div>
+    </section>
 
   );
 };

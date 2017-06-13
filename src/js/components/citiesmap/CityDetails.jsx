@@ -2,7 +2,7 @@ import React from 'react';
 import {inject, observer, PropTypes} from 'mobx-react';
 import {string, number} from 'prop-types';
 
-const CityDetails = ({id, name, nMusea, nPainters, distance, store}) => {
+const CityDetails = ({id, name, store}) => {
 
   const {addLoved} = store;
 
@@ -14,26 +14,22 @@ const CityDetails = ({id, name, nMusea, nPainters, distance, store}) => {
     return <p>Klik op een stad voor meer info</p>;
   } else {
     return (
-        <section>
-          <header>
-            <h1>{name}</h1>
-          </header>
-          <p>{distance} km</p>
-          <button onClick={handleAddLoved}>Hier wil ik naartoe!</button>
-          <ul>
-            <li>{nMusea} musea</li>
-            <li>{nPainters} kunstenaars</li>
-
-            {/* Lijst van de kunstenaars */}
-            <li>
-              <ul>
-                <li></li>
-                <li></li>
-              </ul>
-            </li>
-
-          </ul>
-        </section>
+      <section className='create__detail'>
+        <header>
+          <h1 className='create__detail__title'>{name}</h1>
+        </header>
+        <p className='create__detail__desc'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <ul>
+          {/* Lijst van de kunstenaars */}
+          <li>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+        <button className='create__detail__add-btn' onClick={handleAddLoved}>Hier wil ik naartoe!</button>
+      </section>
     );
   }
 };
@@ -41,9 +37,6 @@ const CityDetails = ({id, name, nMusea, nPainters, distance, store}) => {
 CityDetails.propTypes = {
   id: number,
   name: string,
-  nMusea: number,
-  nPainters: number,
-  distance: number,
   store: PropTypes.observableObject.isRequired
 };
 

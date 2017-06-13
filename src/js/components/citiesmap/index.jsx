@@ -14,16 +14,15 @@ const CitiesMap = ({store}) => {
   (nTotalCities >= 3) ? enoughCitiesSeleted = false : enoughCitiesSeleted = true;
 
   return (
-    <section>
+    <section className='create__container'>
       <EuropeMap />
-      <CityDetails {...selectedCity} />
-      <LovedCities />
-
-      <p>{nTotalCities} {nTotalCities === 1 ? `stad` : `steden`} geselecteerd</p>
-      <Link to='/create/stats' >
-        <p className={classNames({hidden: enoughCitiesSeleted})}>Volgende</p>
-      </Link>
-
+      <div className='create__right'>
+        <CityDetails {...selectedCity} />
+        <LovedCities />
+        <Link to='/create/stats' >
+          <button disabled={enoughCitiesSeleted} className={classNames(`create__next`, {'create__next-disabled': enoughCitiesSeleted})}>Ga op reis</button>
+        </Link>
+      </div>
     </section>
   );
 };

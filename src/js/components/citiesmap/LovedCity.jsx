@@ -11,9 +11,9 @@ const LovedCity = ({name, id, store}) => {
   };
 
   return (
-    <li>
-      <p>{name}</p>
-      <button onClick={handleDelete}>delete</button>
+    <li className='create__loved__item'>
+      <p className='create__loved__city'>{name}</p>
+      <button className='create__loved__delete' onClick={handleDelete}>x</button>
     </li>
   );
 };

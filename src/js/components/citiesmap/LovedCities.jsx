@@ -8,18 +8,21 @@ const LovedCities = ({store}) => {
   const {lovedCities} = store;
 
   return (
-    <ul>
-      {
-        lovedCities.map(
-        l => (
-          <LovedCity
-            {...l}
-            key={l.id}
-          />
+    <section className='create__loved'>
+      <h2 className='create__loved__title'>Gekozen landen</h2>
+      <ul>
+        {
+          lovedCities.map(
+          l => (
+            <LovedCity
+              {...l}
+              key={l.id}
+            />
+            )
           )
-        )
-      }
-    </ul>
+        }
+      </ul>
+    </section>
   );
 };
 
