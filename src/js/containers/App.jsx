@@ -3,8 +3,7 @@ import DevTools from 'mobx-react-devtools';
 import {observer, inject} from 'mobx-react';
 
 import {object} from 'prop-types';
-
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import Home from './Home';
 import Create from './Create';
 import Tours from './Tours';
@@ -29,14 +28,24 @@ class App extends Component {
   }
 
   renderCreateStats = () => {
-    return <CreateStats />;
+    const {nTotalCities} = this.props.store;
+    if (nTotalCities === 0) {
+      return <Redirect to='/create' />;
+    } else {
+      return <CreateStats />;
+    }
   }
 
   renderTourResult = () => {
+    const {nTotalCities, calculateTourResult} = this.props.store;
     let {calculatedTour} = this.props.store;
-    const {calculateTourResult} = this.props.store;
     calculatedTour = calculateTourResult();
-    return <TourResult {...calculatedTour} />;
+
+    if (nTotalCities === 0) {
+      return <Redirect to='/create' />;
+    } else {
+      return <TourResult {...calculatedTour} />;
+    }
   }
 
   render() {
@@ -52,6 +61,7 @@ class App extends Component {
           <Route exact path='/tours' component={Tours} />
           <Route path='/tour/:id' render={this.renderEditProject} />
           <Route exact path='/map' component={ArtworksMap} />
+          <Route render={() => <Redirect to='/' />} />
         </Switch>
 
       </section>

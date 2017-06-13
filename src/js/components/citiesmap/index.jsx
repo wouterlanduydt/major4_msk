@@ -11,7 +11,7 @@ const CitiesMap = ({store}) => {
   const {selectedCity, nTotalCities} = store;
   let enoughCitiesSeleted;
 
-  (nTotalCities === 3) ? enoughCitiesSeleted = false : enoughCitiesSeleted = true;
+  (nTotalCities >= 3) ? enoughCitiesSeleted = false : enoughCitiesSeleted = true;
 
   return (
     <section>
@@ -19,7 +19,7 @@ const CitiesMap = ({store}) => {
       <CityDetails {...selectedCity} />
       <LovedCities />
 
-      <p>{nTotalCities} steden geselecteerd</p>
+      <p>{nTotalCities} {nTotalCities === 1 ? `stad` : `steden`} geselecteerd</p>
       <Link to='/create/stats' >
         <p className={classNames({hidden: enoughCitiesSeleted})}>Volgende</p>
       </Link>

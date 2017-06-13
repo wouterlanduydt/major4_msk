@@ -19,9 +19,9 @@ const CreateStats = ({store}) => {
       </header>
 
       <ul>
-        <li><CountUp start={0} end={nTotalDistance} duration={1.5} useEasing={true} />km reizen</li>
-        <li>door <CountUp start={0} end={nTotalPainters} duration={1.5} useEasing={true} /> verschillende steden</li>
-        <li>om <CountUp start={0} end={nTotalCities} duration={1.5} useEasing={true} /> kunstenaars te zien</li>
+        <li><CountUp start={0} end={nTotalDistance} duration={1.5} />km reizen</li>
+        <li>door <CountUp start={0} end={nTotalCities} duration={1.5} /> verschillende steden</li>
+        <li>om <CountUp start={0} end={nTotalPainters} duration={1.5} /> kunstenaars te zien</li>
       </ul>
 
       <p>Die je ook gewoon in het Museum voor Schone Kunsten kan bewonderen?</p>
