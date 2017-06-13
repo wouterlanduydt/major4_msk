@@ -118,7 +118,6 @@ class Store {
   }
 
   calculateTourResult = () => {
-    console.log(this.mostSelectedArtstyle);
     if (this.nBelgianCities >= 1) {
       return this.getTourById(2);
     } else if (this.nTotalDistance > 3800) {
