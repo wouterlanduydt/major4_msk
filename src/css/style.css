@@ -20,6 +20,73 @@ button {
 
 .homepage {
 
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 40vw;
+    height: 100vh;
+    background: #ff5c58;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: url(../assets/svg/homepage_map.svg) no-repeat top right, url(../assets/svg/homepage_colliseum.svg) no-repeat bottom right;
+    position: absolute;
+  }
+
+  &__img01 {
+    width: 45vw;
+    height: 98vh;
+    margin-right: 5rem;
+    margin-top: 1.7rem;
+    object-fit: cover;
+    object-position: center right;
+    border-right: 1px solid red;
+    border-top: 1px solid red;
+  }
+
+  &__container {
+    width: 59rem;
+    margin-left: 0;
+    overflow: hidden;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 62.5rem;
+      height: 62.5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../assets/svg/paperplane_rotate-line.svg) no-repeat bottom left;
+      margin: -31.25rem -20rem 0 0;
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      width: 63.9rem;
+      height: 63.9rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../assets/svg/paperplane_rotate.svg) no-repeat bottom left;
+      animation: paperplane-rotate 5s infinite linear;
+      transform-origin: center center;
+      margin: -31.25rem -20rem 0 0;
+    }
+  }
+
   &__title {
     font-size: 5rem;
     font-family: denmark;
@@ -29,13 +96,15 @@ button {
 
   &__subtitle {
     font-size: 2.7rem;
-    border-left: .1rem solid red;
+    border-left: .1rem solid #ff5c58;
     padding-left: 2rem;
     margin-bottom: 2rem;
   }
 
   &__introtext {
     font-size: 2.2rem;
+    line-height: 120%;
+    padding-bottom: 2rem;
   }
 
   &__create-btn {
@@ -47,9 +116,28 @@ button {
     padding: 1.5rem 8rem 1.5rem 3rem;
     text-transform: uppercase;
     color: white;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: -13rem;
+      top: -13.6rem;
+      content: '';
+      width: 19.5rem;
+      height: 19rem;
+      background: url(../assets/svg/paperplane01.svg) no-repeat;
+    }
 
     &:hover {
       background: color(red a(.7));
     }
   }
+}
+
+@keyframes paperplane-rotate {
+
+  from { transform: rotate(0deg); }
+
+  to { transform: rotate(360deg); }
 }

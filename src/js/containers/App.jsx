@@ -59,10 +59,7 @@ class App extends Component {
           <Route exact path='/create/result' render={this.renderTourResult} />
           <Route exact path='/tours' component={Tours} />
           <Route path='/tour/:id' render={this.renderEditProject} />
-<<<<<<< HEAD
-=======
           <Route render={() => <Redirect to='/' />} />
->>>>>>> 89fb666792c0900409b0d075adc8f6c13c1de072
         </Switch>
 
       </section>
