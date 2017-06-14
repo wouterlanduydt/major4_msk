@@ -75,6 +75,15 @@ class Store {
   }
 
   @computed
+  get enoughCitiesSeleted() {
+    if (this.nTotalCities >= 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  @computed
   get nBelgianCities() {
     let countBelgianCities = 0;
     this.lovedCities.forEach(l => (l.country === `BE`) ? countBelgianCities ++ : ``);

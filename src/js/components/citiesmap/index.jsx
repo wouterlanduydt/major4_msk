@@ -8,10 +8,7 @@ import LovedCities from './LovedCities';
 
 const CitiesMap = ({store}) => {
 
-  const {selectedCity, nTotalCities} = store;
-  let enoughCitiesSeleted;
-
-  (nTotalCities >= 3) ? enoughCitiesSeleted = false : enoughCitiesSeleted = true;
+  const {selectedCity, enoughCitiesSeleted} = store;
 
   return (
     <section className='create__container'>
@@ -19,8 +16,10 @@ const CitiesMap = ({store}) => {
       <div className='create__right'>
         <CityDetails {...selectedCity} />
         <LovedCities />
-        <Link to='/create/stats' >
-          <button disabled={enoughCitiesSeleted} className={classNames(`create__next`, {'create__next-disabled': enoughCitiesSeleted})}>Ga op reis</button>
+        <Link to='/create/stats' className='create__next-container'>
+          <button disabled={!enoughCitiesSeleted}
+            className={classNames(`create__next`, {'button-disabled': !enoughCitiesSeleted})}>
+            Ga op reis</button>
         </Link>
       </div>
     </section>

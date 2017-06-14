@@ -25,11 +25,86 @@ button {
 
 }
 
+.button-disabled {
+  opacity: .5;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
 a {
   text-decoration: none;
 }
 
 .homepage {
+
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 40vw;
+    height: 100vh;
+    background: #ff5c58;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: url(../assets/svg/homepage_map.svg) no-repeat top right, url(../assets/svg/homepage_colliseum.svg) no-repeat bottom right;
+    position: absolute;
+  }
+
+  &__img01 {
+    width: 45vw;
+    height: 98vh;
+    margin-right: 5rem;
+    margin-top: 1.7rem;
+    object-fit: cover;
+    object-position: center right;
+    border-right: 1px solid red;
+    border-top: 1px solid red;
+  }
+
+  &__container {
+    width: 59rem;
+    margin-left: 0;
+    overflow: hidden;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 62.5rem;
+      height: 62.5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../assets/svg/paperplane_rotate-line.svg) no-repeat bottom left;
+      margin: -31.25rem -20rem 0 0;
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      width: 63.9rem;
+      height: 63.9rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../assets/svg/paperplane_rotate.svg) no-repeat bottom left;
+      animation: paperplane-rotate 5s infinite linear;
+      transform-origin: center center;
+      margin: -31.25rem -20rem 0 0;
+    }
+  }
 
   &__title {
     font-size: 5rem;
@@ -40,13 +115,15 @@ a {
 
   &__subtitle {
     font-size: 2.7rem;
-    border-left: .1rem solid red;
+    border-left: .1rem solid #ff5c58;
     padding-left: 2rem;
     margin-bottom: 2rem;
   }
 
   &__introtext {
     font-size: 2.2rem;
+    line-height: 120%;
+    padding-bottom: 2rem;
   }
 
   &__create-btn {
@@ -58,6 +135,18 @@ a {
     padding: 1.5rem 8rem 1.5rem 3rem;
     text-transform: uppercase;
     color: white;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: -13rem;
+      top: -13.6rem;
+      content: '';
+      width: 19.5rem;
+      height: 19rem;
+      background: url(../assets/svg/paperplane01.svg) no-repeat;
+    }
 
     &:hover {
       background: color(red a(.7));
@@ -96,19 +185,40 @@ a {
       text-align: right;
       width: 38rem;
       margin-left: 5vw;
-      margin-top: 4rem;
+      margin-top: 5rem;
       font-size: 3.3rem;
       font-family: denmark;
       font-weight: bold;
+      color: #322d2d;
+    }
+
+    &__annotation:hover {
+      cursor: pointer;
     }
 
   }
 
+  &__right {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+    width: 48vw;
+  }
+
   &__detail {
+    position: relative;
+    left: -1rem;
     border: .1rem solid red;
+    background-color: white;
     padding: 2rem;
     display: flex;
     flex-direction: column;
+
+    &-no-selected {
+      height: 30vh;
+    }
 
     &__title {
       font-size: 3rem;
@@ -128,6 +238,8 @@ a {
   }
 
   &__loved {
+    align-self: center;
+    width: 40vw;
 
     &__title {
       font-family: denmark;
@@ -136,6 +248,8 @@ a {
     }
 
     &__item {
+      height: 3.2rem;
+      margin-top: 1.2rem;
       display: flex;
       justify-content: space-between;
       border-bottom: .1rem solid red;
@@ -149,20 +263,23 @@ a {
       font-size: 2rem;
       font-family: denmark;
       font-weight: bold;
+      color: red;
     }
 
   }
 
   &__next {
+
+    &-container {
+      align-self: flex-end;
+    }
+
+    align-self: right;
     font-size: 2.7rem;
     text-transform: uppercase;
     color: white;
     background-color: color(red a(.5));
     border: .1rem solid red;
-
-    &-disabled {
-      opacity: .5;
-    }
 
   }
 
@@ -172,4 +289,11 @@ a {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+@keyframes paperplane-rotate {
+
+  from { transform: rotate(0deg); }
+
+  to { transform: rotate(360deg); }
 }

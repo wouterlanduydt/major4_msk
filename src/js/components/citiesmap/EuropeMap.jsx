@@ -33,7 +33,7 @@ const EuropeMap = ({store}) => {
               id={c.id.toString()}
               key={c.id}
               layout={{"icon-image": `marker-15`}}>
-              <Feature onClick={handleCityClick} coordinates={[c.lat, c.lon]} />
+              <Feature className='create__map__annotation' onClick={handleCityClick} coordinates={[c.lat, c.lon]} />
             </Layer>
             )
           )

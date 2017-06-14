@@ -1,17 +1,22 @@
 import React from 'react';
 import {inject, observer, PropTypes} from 'mobx-react';
 import {string, number} from 'prop-types';
+import classNames from 'classnames';
 
 const CityDetails = ({id, name, store}) => {
 
-  const {addLoved} = store;
+  const {addLoved, enoughCitiesSeleted} = store;
 
   const handleAddLoved = () => {
     addLoved(id);
   };
 
   if (name === ``) {
-    return <p>Klik op een stad voor meer info</p>;
+    return (
+      <section className='create__detail create__detail-no-selected'>
+        <p>Klik op een stad voor meer info</p>
+      </section>
+    );
   } else {
     return (
       <section className='create__detail'>
@@ -22,13 +27,18 @@ const CityDetails = ({id, name, store}) => {
         <ul>
           {/* Lijst van de kunstenaars */}
           <li>
+            <img></img>
             <ul>
               <li></li>
               <li></li>
             </ul>
           </li>
         </ul>
-        <button className='create__detail__add-btn' onClick={handleAddLoved}>Hier wil ik naartoe!</button>
+        <button
+          disabled={enoughCitiesSeleted}
+          className={classNames(`create__detail__add-btn`, {'button-disabled': enoughCitiesSeleted})}
+          onClick={handleAddLoved}>Hier wil ik naartoe!
+        </button>
       </section>
     );
   }

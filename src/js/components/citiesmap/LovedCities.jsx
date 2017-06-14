@@ -5,7 +5,13 @@ import LovedCity from './LovedCity';
 
 const LovedCities = ({store}) => {
 
-  const {lovedCities} = store;
+  const {lovedCities, nTotalCities} = store;
+  const citiesToSelect = 3 - nTotalCities;
+  const citiesToSelectItems = [];
+
+  for (let i = 0;i < citiesToSelect;i ++) {
+    citiesToSelectItems.push(<li key={i} className='create__loved__item'></li>);
+  }
 
   return (
     <section className='create__loved'>
@@ -21,6 +27,7 @@ const LovedCities = ({store}) => {
             )
           )
         }
+        {citiesToSelectItems}
       </ul>
     </section>
   );

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="173px" height="186px" viewBox="0 0 173 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-desktop-Copy" transform="translate(-1105.000000, -454.000000)" stroke-width="1.2">
+            <g id="inhoud" transform="translate(706.000000, 231.000000)">
+                <g id="STEL-SAMEN" transform="translate(0.000000, 221.000000)">
+                    <g id="Group-3" transform="translate(391.000000, 0.000000)">
+                        <g id="vliegertje-copy-2" transform="translate(168.150646, 21.104708) rotate(-350.000000) translate(-168.150646, -21.104708) translate(152.650646, 2.604708)" stroke-linecap="round" stroke="#FF0000" stroke-linejoin="round">
+                            <polygon id="Triangle" points="15.4937139 0.58474513 30.2089153 36.882242 15.4937139 25.3495861"></polygon>
+                            <polygon id="Triangle" points="15.4937139 0.58474513 0.40105224 36.882242 15.4937139 25.3495861"></polygon>
+                        </g>
+                        <path d="M63.3047043,154.268268 C80.7474607,153.597015 102.706673,148.502734 123.637397,137.10847 C134.578612,131.152293 158.237443,110.444656 183.126936,52.8879821" id="Path-36" stroke="#FF0000" stroke-dasharray="15" transform="translate(123.215820, 103.578125) rotate(-16.000000) translate(-123.215820, -103.578125) "></path>
+                        <path d="M3.72631127,177.889999 C26.597405,187.991561 51.3366785,170.130154 48.471823,154.789179 C45.6069675,139.448203 20.5856863,145.889999 30.909905,166.401718 C37.7035221,179.898987 56.3978689,182.273573 71.1895872,180.134416" id="Path-36-Copy" stroke="#FFFFFF" stroke-dasharray="15" transform="translate(37.457949, 163.576512) rotate(-16.000000) translate(-37.457949, -163.576512) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
