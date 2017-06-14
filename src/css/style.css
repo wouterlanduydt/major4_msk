@@ -84,7 +84,7 @@ a {
     width: 45vw;
     height: 98vh;
     margin-right: 6rem;
-    margin-top: 1.7rem;
+    margin-top: 1.8rem;
     object-fit: cover;
     object-position: center right;
     border-right: 2px solid red;
@@ -120,8 +120,8 @@ a {
 
   &__introtext {
     font-size: 2.2rem;
-    line-height: 120%;
-    padding-bottom: 2rem;
+    line-height: 140%;
+    padding-bottom: 3rem;
   }
 
   &__create-btn {
@@ -153,6 +153,7 @@ a {
   }
 
   &__discover-btn {
+    display: block;
     font-size: 2rem;
     text-transform: uppercase;
     color: color(red a(.6));
@@ -163,9 +164,10 @@ a {
 
   &__link-msk {
     color: color(red a(.6));
-    position: relative;
-    top: 20rem;
     font-family: denmark-bold;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3rem;
   }
 }
 
