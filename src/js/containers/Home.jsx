@@ -17,10 +17,12 @@ const Home = () => {
             <button className='homepage__create-btn'>Stel je cultuurtrip samen</button>
           </Link>
         </div>
-        <Link to='/tours' >
-          <p className='homepage__discover-btn'>Ontdek de touren</p>
-        </Link>
-        <a href='https://www.mskgent.be' className='homepage__link-msk'>www.mskgent.be</a>
+        <div className='homepage__container-link'>
+          <Link to='/tours' >
+            <span className='homepage__discover-btn'>Of kies een tour uit het overzicht</span>
+          </Link>
+          <a href='https://www.mskgent.be' target='_blank ' className='homepage__link-msk'>www.mskgent.be</a>
+        </div>
       </div>
     </section>
   );

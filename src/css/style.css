@@ -12,26 +12,52 @@ body {
 }
 
 button {
+  border: none;
+  background-color: white;
 
   &:focus {
     outline: none;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+
 }
 
-.homepage {
+a {
+  text-decoration: none;
+}
 
+/*&::before {
+  display: block;
+  content: '';
+  width: 43.5vw;
+  height: 100vh;
+  background: #ff5c58;
+  position: absolute;
+  z-index: -1;
+}*/
+
+.homepage {
   display: flex;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, #ff5c58, #ff5c58 43.5%, transparent 43.5%);
 
   &::before {
     display: block;
     content: '';
-    width: 40vw;
-    height: 100vh;
-    background: #ff5c58;
+    width: 63.9rem;
+    height: 63.9rem;
     position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../assets/svg/paperplane_rotate.svg) no-repeat bottom left;
+    animation: paperplane-rotate 25s infinite linear;
+    transform-origin: center center;
+    margin: -32.3rem -13.75rem 0 0;
     z-index: -1;
   }
 
@@ -42,48 +68,29 @@ button {
     height: 100vh;
     background: url(../assets/svg/homepage_map.svg) no-repeat top right, url(../assets/svg/homepage_colliseum.svg) no-repeat bottom right;
     position: absolute;
+    z-index: -2;
   }
 
   &__img01 {
     width: 45vw;
     height: 98vh;
-    margin-right: 5rem;
+    margin-right: 6rem;
     margin-top: 1.7rem;
     object-fit: cover;
     object-position: center right;
-    border-right: 1px solid red;
-    border-top: 1px solid red;
+    border-right: 2px solid red;
+    border-top: 2px solid red;
   }
 
   &__container {
     width: 59rem;
     margin-left: 0;
-    overflow: hidden;
 
-    &::before {
-      display: block;
-      content: '';
-      width: 62.5rem;
-      height: 62.5rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: url(../assets/svg/paperplane_rotate-line.svg) no-repeat bottom left;
-      margin: -31.25rem -20rem 0 0;
-    }
-
-    &::after {
-      display: block;
-      content: '';
-      width: 63.9rem;
-      height: 63.9rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: url(../assets/svg/paperplane_rotate.svg) no-repeat bottom left;
-      animation: paperplane-rotate 5s infinite linear;
-      transform-origin: center center;
-      margin: -31.25rem -20rem 0 0;
+    &-link {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 0;
+      justify-content: space-between;
     }
   }
 
@@ -92,6 +99,7 @@ button {
     font-family: denmark;
     font-weight: bold;
     margin-bottom: 3rem;
+    padding-top: 1rem;
   }
 
   &__subtitle {
@@ -117,6 +125,7 @@ button {
     text-transform: uppercase;
     color: white;
     position: relative;
+    cursor: pointer;
 
     &::after {
       display: block;
@@ -132,6 +141,22 @@ button {
     &:hover {
       background: color(red a(.7));
     }
+  }
+
+  &__discover-btn {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: color(red a(.6));
+    text-decoration: underline;
+    text-align: center;
+    width: 52.7rem;
+  }
+
+  &__link-msk {
+    color: color(red a(.6));
+    position: relative;
+    top: 20rem;
+    font-family: denmark-bold;
   }
 }
 
