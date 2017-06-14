@@ -24,7 +24,7 @@ class Store {
       name: `Brugge`,
       country: `BE`,
       artStyle: `modernisme`,
-      artStyleId: 9,
+      artStyleId: 5,
       nPainters: 9,
       nMusea: 6,
       distance: 50,
@@ -36,7 +36,7 @@ class Store {
       name: `Athene`,
       country: `GR`,
       artStyle: `ancient greek art`,
-      artStyleId: 1,
+      artStyleId: 5,
       nPainters: 25,
       nMusea: 5,
       distance: 2888,
@@ -48,7 +48,7 @@ class Store {
       name: `Londen`,
       country: `GB`,
       artStyle: `english art`,
-      artStyleId: 2,
+      artStyleId: 5,
       nPainters: 34,
       nMusea: 5,
       distance: 323,
@@ -137,7 +137,7 @@ class Store {
   }
 
   calculateTourResult = () => {
-    if (this.nBelgianCities >= 1) {
+    if (this.nBelgianCities >= 2) {
       return this.getTourById(2);
     } else if (this.nTotalDistance > 3800) {
       return this.getTourById(3);
