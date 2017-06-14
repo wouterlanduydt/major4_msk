@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="331px" height="179px" viewBox="0 0 331 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.50243433">
+        <g id="Tour-desktop" transform="translate(0.000000, -744.000000)" stroke="#FFFFFF" stroke-width="1.2">
+            <g id="Group-5" transform="translate(-4.000000, 696.000000)">
+                <g id="vliegertje-copy-2" transform="translate(322.150646, 67.104708) rotate(-350.000000) translate(-322.150646, -67.104708) translate(306.650646, 48.604708)" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon id="Triangle" points="15.4937139 0.58474513 30.2089153 36.882242 15.4937139 25.3495861"></polygon>
+                    <polygon id="Triangle" points="15.4937139 0.58474513 0.40105224 36.882242 15.4937139 25.3495861"></polygon>
+                </g>
+                <path d="M24.1747644,39.1513495 C-10.5931489,198.041509 246.185987,324.637611 328.735138,126.482631" id="Path-36" stroke-dasharray="15" transform="translate(174.846855, 133.520074) rotate(-16.000000) translate(-174.846855, -133.520074) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

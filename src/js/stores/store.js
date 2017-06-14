@@ -109,7 +109,7 @@ class Store {
   }
 
   calculateTourResult = () => {
-    if (this.nBelgianCities >= 1) {
+    if (this.nBelgianCities >= 2) {
       return this.getTourById(2);
     } else if (this.nTotalDistance > 3800) {
       return this.getTourById(3);
