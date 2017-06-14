@@ -11,7 +11,7 @@ const CreateStats = ({store}) => {
     <section className='stats'>
 
       <Link to='/create'>
-        <span className='stats__back-btn red-back-btn'>Terug</span>
+        <span className='stats__back-btn red-btn'>Terug</span>
       </Link>
 
       <div className='stats__container'>
@@ -20,17 +20,19 @@ const CreateStats = ({store}) => {
         </header>
 
         <ul className='stats__list'>
-          <li className='stats__list__item'><span><CountUp className='stats__number' start={0} end={nTotalDistance} duration={1.8} />km</span> reizen</li>
-          <li className='stats__list__item'>door <span></span><CountUp className='stats__number' start={0} end={nTotalCities} duration={1.8} /> verschillende steden</li>
-          <li className='stats__list__item'>om <span></span><CountUp className='stats__number' start={0} end={nTotalPainters} duration={1.8} /> kunstenaars te zien</li>
+          <li className='stats__list__item stats__list__item1'><span className='stats__list__bold'><CountUp className='stats__list__number' start={0} end={nTotalDistance} duration={2.5} />km</span> reizen</li>
+          <li className='stats__list__item stats__list__item2'>door <span className='stats__list__bold'><CountUp className='stats__list__number' start={0} end={nTotalCities} duration={10.5} /> verschillende</span> steden</li>
+          <li className='stats__list__item stats__list__item3'>om <span className='stats__list__bold'><CountUp className='stats__list__number' start={0} end={nTotalPainters} duration={5} /> kunstenaars</span> te zien</li>
         </ul>
 
-        <p>Die je ook gewoon in het Museum voor Schone Kunsten kan bewonderen?</p>
+        <p className='stats__justmsk'>Die je ook gewoon in het <span className='stats__justmsk-bold'>MSK</span> kan bewonderen?</p>
 
         <Link to='/create/result'>
-          <span>Bereken jouw tour</span>
+          <span className='stats__next-btn red-btn'>Bereken jouw tour</span>
         </Link>
       </div>
+
+      <img className='stats__img' src='../../../assets/img/stats-bg-image.jpg' alt='walking in msk' width='1660' height='920' />
 
     </section>
   );

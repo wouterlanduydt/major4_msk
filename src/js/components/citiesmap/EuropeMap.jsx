@@ -4,18 +4,19 @@ import ReactMapboxGl, {Layer, Feature} from "react-mapbox-gl";
 
 const EuropeMap = ({store}) => {
 
-  const {cities, setSelectedCity, getCityById} = store;
+  const {cities, setSelectedCity, getCityById, randomizeArtworks} = store;
 
   const handleCityClick = args => {
     const clickedCityId = parseInt(args.feature.layer.id);
     const clickedCity = getCityById(clickedCityId);
     setSelectedCity(clickedCity);
+    randomizeArtworks();
   };
 
   return (
     <div className='create__map'>
       <header className='create__map__title-container'>
-        <h1 className='create__map__title'>Voeg 3 steden toe waar je naartoe zou willen reizen</h1>
+        <h1 className='create__map__title'>Voeg 3 steden toe<br /> waar je naartoe zou<br /> willen reizen</h1>
       </header>
       <ReactMapboxGl
         style='mapbox://styles/wouterlanduydt/cj3w1tee80f302sk1guridccu'

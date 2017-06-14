@@ -10,7 +10,7 @@ const LovedCities = ({store}) => {
   const citiesToSelectItems = [];
 
   for (let i = 0;i < citiesToSelect;i ++) {
-    citiesToSelectItems.push(<li key={i} className='create__loved__item'></li>);
+    citiesToSelectItems.push(<li key={i} className='create__loved__item create__loved__item-empty'></li>);
   }
 
   return (

@@ -37,8 +37,8 @@ a {
   text-decoration: none;
 }
 
-.red-back-btn {
-  margin: 1rem 0 0 2rem;
+.red-btn {
+  margin: 4rem 0 0 4rem;
   display: inline-block;
   border: .1rem solid red;
   background-color: color(red a(.5));
@@ -183,7 +183,7 @@ a {
 
   &__back-btn {
     display: inline-block;
-    margin: 1rem 0 0 2rem;
+    margin: 4rem 0 0 4rem;
     text-transform: uppercase;
     color: white;
     font-size: 2.4rem;
@@ -200,8 +200,7 @@ a {
 
     &__title {
       text-align: right;
-      width: 38rem;
-      margin-left: 5vw;
+      width: 47.5vw;
       margin-top: 5rem;
       font-size: 3.3rem;
       font-family: denmark;
@@ -216,12 +215,12 @@ a {
   }
 
   &__right {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 95vh;
-    width: 48vw;
+    width: 49vw;
   }
 
   &__detail {
@@ -270,6 +269,11 @@ a {
       display: flex;
       justify-content: space-between;
       border-bottom: .1rem solid red;
+
+      &-empty {
+        border-color: color(red a(.25));
+      }
+
     }
 
     &__city {
@@ -300,6 +304,36 @@ a {
 
   }
 
+  &__artworks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+
+    &__item {
+      margin-right: 1rem;
+    }
+
+    &__image {
+      width: 12rem;
+      height: 12rem;
+      object-fit: cover;
+      border: .1rem solid #ff5c58;
+      padding-top: .8rem;
+      background: #ff5c58;
+    }
+
+    &__details {
+      width: 12rem;
+      font-size: 1rem;
+    }
+
+    &__title {
+      font-weight: bold;
+      margin-bottom: .4rem;
+    }
+
+  }
+
 }
 
 .mapboxgl-map {
@@ -309,6 +343,10 @@ a {
 }
 
 .stats {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__container {
     display: flex;
@@ -322,6 +360,79 @@ a {
     font-weight: bold;
   }
 
+  &__list {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      font-size: 3.4rem;
+      margin-bottom: 2rem;
+
+      &1 {
+        animation: fadein 1s linear;
+        animation-fill-mode: both;
+      }
+
+      &2 {
+        animation: fadein 1s linear;
+        animation-fill-mode: both;
+        animation-delay: .5s;
+      }
+
+      &3 {
+        animation: fadein 1s linear;
+        animation-fill-mode: both;
+        animation-delay: 1s;
+      }
+
+    }
+
+    &__bold {
+      font-weight: bold;
+    }
+
+    &__number {
+      color: red;
+    }
+
+  }
+
+  &__justmsk {
+    font-size: 3.8rem;
+    text-align: center;
+    animation: fadein 1s linear;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+
+    &-bold {
+      font-family: denmark;
+      font-weight: bold;
+    }
+
+  }
+
+  &__next-btn {
+    animation: fadein 1s linear;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+    margin-top: 3rem;
+    font-size: 3.3rem;
+    padding: 1rem 2rem;
+  }
+
+  &__img {
+    position: relative;
+    margin-top: 1rem;
+    width: 100vw;
+    height: 20vh;
+    object-fit: cover;
+    padding-top: 1rem;
+    background: linear-gradient(to left, #ff5c58 0, #ff5c58 98%, transparent 98%, transparent);
+    animation: .5s slidein ease-out;
+  }
+
 }
 
 @keyframes paperplane-rotate {
@@ -329,4 +440,20 @@ a {
   from { transform: rotate(0deg); }
 
   to { transform: rotate(360deg); }
+}
+
+@keyframes fadein {
+
+  0% { opacity: 0; }
+
+  66% { opacity: 0; }
+
+  100% { opacity: 1; }
+}
+
+@keyframes slidein {
+
+  0% { top: 15.5rem; }
+
+  100% { top: 0; }
 }
