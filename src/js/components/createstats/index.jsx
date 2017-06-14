@@ -8,27 +8,29 @@ const CreateStats = ({store}) => {
   const {nTotalDistance, nTotalPainters, nTotalCities} = store;
 
   return (
-    <section>
+    <section className='stats'>
 
       <Link to='/create'>
-        <p>Terug</p>
+        <span className='stats__back-btn red-back-btn'>Terug</span>
       </Link>
 
-      <header>
-        <h1>Waarom zou je...</h1>
-      </header>
+      <div className='stats__container'>
+        <header>
+          <h1 className='stats__title'>Waarom zou je...</h1>
+        </header>
 
-      <ul>
-        <li><CountUp start={0} end={nTotalDistance} duration={1.5} />km reizen</li>
-        <li>door <CountUp start={0} end={nTotalCities} duration={1.5} /> verschillende steden</li>
-        <li>om <CountUp start={0} end={nTotalPainters} duration={1.5} /> kunstenaars te zien</li>
-      </ul>
+        <ul className='stats__list'>
+          <li className='stats__list__item'><span><CountUp className='stats__number' start={0} end={nTotalDistance} duration={1.8} />km</span> reizen</li>
+          <li className='stats__list__item'>door <span></span><CountUp className='stats__number' start={0} end={nTotalCities} duration={1.8} /> verschillende steden</li>
+          <li className='stats__list__item'>om <span></span><CountUp className='stats__number' start={0} end={nTotalPainters} duration={1.8} /> kunstenaars te zien</li>
+        </ul>
 
-      <p>Die je ook gewoon in het Museum voor Schone Kunsten kan bewonderen?</p>
+        <p>Die je ook gewoon in het Museum voor Schone Kunsten kan bewonderen?</p>
 
-      <Link to='/create/result'>
-        <p>Bereken jouw tour</p>
-      </Link>
+        <Link to='/create/result'>
+          <span>Bereken jouw tour</span>
+        </Link>
+      </div>
 
     </section>
   );

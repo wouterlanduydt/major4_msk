@@ -18,7 +18,44 @@ class Store {
   cities = []
 
   @observable
-  lovedCities = []
+  lovedCities = [
+    {
+      id: 0,
+      name: `Brugge`,
+      country: `BE`,
+      artStyle: `modernisme`,
+      artStyleId: 9,
+      nPainters: 9,
+      nMusea: 6,
+      distance: 50,
+      lon: 51.2605833,
+      lat: 3.0820626
+    },
+    {
+      id: 1,
+      name: `Athene`,
+      country: `GR`,
+      artStyle: `ancient greek art`,
+      artStyleId: 1,
+      nPainters: 25,
+      nMusea: 5,
+      distance: 2888,
+      lon: 37.9908164,
+      lat: 23.6682993
+    },
+    {
+      id: 2,
+      name: `Londen`,
+      country: `GB`,
+      artStyle: `english art`,
+      artStyleId: 2,
+      nPainters: 34,
+      nMusea: 5,
+      distance: 323,
+      lon: 51.5285578,
+      lat: - 0.2420434
+    }
+  ]
 
   @action
   addData = () => {

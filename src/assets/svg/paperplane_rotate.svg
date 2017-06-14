@@ -1,27 +1,113 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="641px" height="641px" viewBox="0 0 641 641" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 6</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Group-6" transform="translate(1.000000, 1.000000)" stroke-width="1.2" stroke="#FF0000">
-            <g id="vliegertje-copy-3" transform="translate(319.000000, 623.500000) rotate(270.000000) translate(-319.000000, -623.500000) translate(303.500000, 604.500000)">
-                <polygon id="Triangle" points="15.7935798 0.59606231 30.7935798 37.5960623 15.7935798 25.8402029"></polygon>
-                <polygon id="Triangle" points="15.7935798 0.59606231 0.40881422 37.5960623 15.7935798 25.8402029"></polygon>
-            </g>
-            <g id="vliegertje-copy-6" transform="translate(319.000000, 15.500000) scale(-1, 1) rotate(270.000000) translate(-319.000000, -15.500000) translate(303.500000, -3.500000)">
-                <polygon id="Triangle" points="15.7935798 0.59606231 30.7935798 37.5960623 15.7935798 25.8402029"></polygon>
-                <polygon id="Triangle" points="15.7935798 0.59606231 0.40881422 37.5960623 15.7935798 25.8402029"></polygon>
-            </g>
-            <g id="vliegertje-copy-7" transform="translate(15.500000, 320.000000) scale(-1, 1) translate(-15.500000, -320.000000) translate(0.000000, 301.000000)">
-                <polygon id="Triangle" points="15.7935798 0.59606231 30.7935798 37.5960623 15.7935798 25.8402029"></polygon>
-                <polygon id="Triangle" points="15.7935798 0.59606231 0.40881422 37.5960623 15.7935798 25.8402029"></polygon>
-            </g>
-            <g id="vliegertje-copy-8" transform="translate(623.500000, 320.000000) scale(1, -1) translate(-623.500000, -320.000000) translate(608.000000, 301.000000)">
-                <polygon id="Triangle" points="15.7935798 0.59606231 30.7935798 37.5960623 15.7935798 25.8402029"></polygon>
-                <polygon id="Triangle" points="15.7935798 0.59606231 0.40881422 37.5960623 15.7935798 25.8402029"></polygon>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 639 639" style="enable-background:new 0 0 639 639;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);enable-background:new    ;}
+	.st1{clip-path:url(#SVGID_4_);}
+	
+		.st2{clip-path:url(#SVGID_6_);fill:#FFFFFF;stroke:#FF0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{clip-path:url(#SVGID_8_);}
+	.st4{clip-path:url(#SVGID_10_);fill:#FFFFFF;}
+	.st5{clip-path:url(#SVGID_12_);fill:none;stroke:#FF0000;stroke-width:1.2;stroke-miterlimit:10;}
+	
+		.st6{clip-path:url(#SVGID_12_);fill:#FFFFFF;stroke:#FF0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st7{clip-path:url(#SVGID_14_);}
+	.st8{clip-path:url(#SVGID_16_);fill:#FFFFFF;}
+	.st9{clip-path:url(#SVGID_18_);fill:none;stroke:#FF0000;stroke-width:1.2;stroke-miterlimit:10;}
+	
+		.st10{clip-path:url(#SVGID_18_);fill:#FFFFFF;stroke:#FF0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="639" height="639"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="6" y="-1" width="626" height="641"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st1">
+				<defs>
+					<rect id="SVGID_5_" x="12" width="614" height="639"/>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+				</clipPath>
+				<polygon class="st2" points="300.6,623.2 337.6,608.2 325.8,623.2 				"/>
+				<polygon class="st2" points="300.6,623.2 337.6,638.6 325.8,623.2 				"/>
+				<polygon class="st2" points="337.4,15.2 300.4,0.2 312.2,15.2 				"/>
+				<polygon class="st2" points="337.4,15.2 300.4,30.6 312.2,15.2 				"/>
+			</g>
+			<g class="st1">
+				<defs>
+					<path id="SVGID_7_" d="M15,329.4c1.1,1.2,2.3-3.5,2.6-10.5c0.3-7-0.4-13.6-1.6-14.7c-1.1-1.2-2.3,3.5-2.6,10.5
+						C13.2,321.6,13.9,328.2,15,329.4z"/>
+				</defs>
+				<clipPath id="SVGID_8_">
+					<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+				</clipPath>
+				<g class="st3">
+					<defs>
+						<rect id="SVGID_9_" x="12" width="614" height="639"/>
+					</defs>
+					<clipPath id="SVGID_10_">
+						<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+					</clipPath>
+					
+						<rect x="7.8" y="299.1" transform="matrix(0.9925 -0.1219 0.1219 0.9925 -38.4901 4.2512)" class="st4" width="15.4" height="35.3"/>
+				</g>
+			</g>
+			<g class="st1">
+				<defs>
+					<rect id="SVGID_11_" x="12" width="614" height="639"/>
+				</defs>
+				<clipPath id="SVGID_12_">
+					<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+				</clipPath>
+				<path class="st5" d="M15,329.4c1.1,1.2,2.3-3.5,2.6-10.5c0.3-7-0.4-13.6-1.6-14.7s-2.3,3.5-2.6,10.5
+					C13.2,321.6,13.9,328.2,15,329.4z"/>
+				<polygon class="st6" points="33.9,300.1 48.7,334.2 39.1,324.8 				"/>
+				<polygon class="st6" points="33.9,300.1 26.5,339.5 39.1,324.8 				"/>
+			</g>
+			<g class="st1">
+				<defs>
+					<path id="SVGID_13_" d="M623.2,310.7c-1.1-1.2-2.3,3.5-2.6,10.5c-0.3,7,0.4,13.6,1.6,14.7c1.1,1.2,2.3-3.5,2.6-10.5
+						C625,318.4,624.3,311.8,623.2,310.7z"/>
+				</defs>
+				<clipPath id="SVGID_14_">
+					<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+				</clipPath>
+				<g class="st7">
+					<defs>
+						<rect id="SVGID_15_" x="12" width="614" height="639"/>
+					</defs>
+					<clipPath id="SVGID_16_">
+						<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+					</clipPath>
+					
+						<rect x="615" y="305.6" transform="matrix(0.9925 -0.1219 0.1219 0.9925 -34.7532 78.2941)" class="st8" width="15.4" height="35.3"/>
+				</g>
+			</g>
+			<g class="st1">
+				<defs>
+					<rect id="SVGID_17_" x="12" width="614" height="639"/>
+				</defs>
+				<clipPath id="SVGID_18_">
+					<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+				</clipPath>
+				<path class="st9" d="M623.2,310.7c-1.1-1.2-2.3,3.5-2.6,10.5c-0.3,7,0.4,13.6,1.6,14.7c1.1,1.2,2.3-3.5,2.6-10.5
+					C625,318.4,624.3,311.8,623.2,310.7z"/>
+				<polygon class="st10" points="604.3,339.9 589.5,305.9 599.1,315.2 				"/>
+				<polygon class="st10" points="604.3,339.9 611.7,300.5 599.1,315.2 				"/>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>
