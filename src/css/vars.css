@@ -1,4 +1,11 @@
 :root {
   --dark-color: #544545;
   --red-color: #ff6565;
+  --line-width: .1rem;
+  --title-fonts: 3.2rem;
+  --stand-fonts: 1.8rem;
+  --stand-lineh: 140%;
+  --big-buttn-fonts: 2.3rem;
+  --small-buttn-fonts: 2rem;
+  --small-buttn-padding: 2rem;
 }
