@@ -1,0 +1,31 @@
+[
+  {
+    "id": 0,
+    "map": "tour0",
+    "title": "Surreal tour",
+    "desc": "Surrealisme wil ervoor zorgen, dat je een andere kijk op de werkelijkheid krijgt. Het wil dat je de achterliggende betekenis achter het kunstwerk zoekt, en hieruit leert. Enkele voorbeelden van bekende surrealisten zijn: René Magritte, Max Ernst, Salvador Dali en Frida Kahlo."
+  },
+  {
+    "id": 1,
+    "map": "tour1",
+    "title": "Modern tour",
+    "desc": "Modernisme is een kunstvorm dat tegen alle oude kunstvormen was, en zich wou focussen op de innovatie van de toenmalige tijd. Men experimenteerde met nieuwe vormen, technieken, materialen en technieken om kunstwerken te creëren dat de moderne samenleving weerspiegelde. Enkele voorbeelden van bekende Modernisten zijn: Raoul Hausmann, Robert Morris, Jackson Pollock en Georges Braque."
+  },
+  {
+    "id": 2,
+    "map": "tour2",
+    "title": "Belgian tour",
+    "desc": "Ook hebben De Belgen in het verleden een grote rol gespeeld in de kunstwereld. We zijn zelf zo trots op onze Belgen, dat we speciaal een tour voor hen hebben gemaakt. De tour bestaat uit een gezonde variatie van verschillende stijlen en kunstenaars. Enkele voorbeelden van bekende Belgen zijn: Constant Permeke, James Ensor, Jan Verhas en Paul Delvaux."
+  },
+  {
+    "id": 3,
+    "map": "tour3",
+    "title": "Far Far Away tour",
+    "desc": "Je bent niet verplicht om ver te reizen wanneer je de beste kunstwerken wil zien, deze hangen ook in het MSK. Enkele voorbeelden van bekende kunstenaars zijn: Vincent Van Gogh, Jackson Pollock, Max Ernst en James Ensor."
+  }, {
+    "id": 4,
+    "map": "tour4",
+    "title": "Garden lover tour",
+    "desc": "Art nouveau en naturalisme zijn 2 kunststromingen die samen hun liefde voor de natuur willen uiten. Daarom hebben we deze samen in een tour gegoten zodat u zeker niets mist van de mooie kunstwerken die men heeft gemaakt van landschappen, of van taferelen die vol staan met bloemen en bomen. Enkele voorbeelden van bekende naturalisten en art nouveau kunstenaars zijn: Willem Witsen, Vincent Van Gogh, Hector Guimard en Jan Toorop."
+  }
+]
