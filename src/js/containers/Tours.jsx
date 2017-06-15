@@ -4,40 +4,23 @@ import {Link} from 'react-router-dom';
 
 import Tour from '../components/tour';
 
-const Tours = ({tours}) => {
-  return (
-    <section>
-      <Link to='/' >
-        <p>Terug</p>
-      </Link>
+const Tours = ({store}) => {
 
-      <h1>Onze Touren</h1>
-      <p>Dit zijn alle tours die we bij het MSK in Gent te bieden hebben, ontdek welke voor jou het interessantst lijkt, door je eigen reis samen te stellen.</p>
-      <ul>
-        {
-          tours.map(
-          t => (
-            <Tour
-              {...t}
-              key={t.id}
-            />
-            )
-          )
-        }
-      </ul>
+  const {selectedTour} = store;
+
+  return (
+    <section className='tours__container'>
+      <Link to='/' >
+        <span className='red-btn tours__back'>Terug</span>
+      </Link>
+      <Tour {...selectedTour} />
     </section>
 
   );
 };
 
 Tours.propTypes = {
-  tours: PropTypes.observableArray.isRequired
+  store: PropTypes.observableObject.isRequired
 };
 
-export default inject(
-  ({store}) => {
-    return {tours: store.tours};
-  }
-)(
-  observer(Tours)
-);
+export default inject(`store`)(observer(Tours));

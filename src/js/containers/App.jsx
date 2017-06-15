@@ -9,17 +9,8 @@ import Create from './Create';
 import Tours from './Tours';
 import CreateStats from '../components/createstats';
 import TourResult from '../components/tourresult';
-import TourDetail from '../components/tour/TourDetail';
 
 class App extends Component {
-
-  renderEditProject = ({match}) => {
-    const {id} = match.params;
-    const {getTourById} = this.props.store;
-    const tour = getTourById(id);
-
-    return <TourDetail {...tour} />;
-  };
 
   componentDidMount() {
     const {addData} = this.props.store;
@@ -58,7 +49,6 @@ class App extends Component {
           <Route exact path='/create/stats' render={this.renderCreateStats} />
           <Route exact path='/create/result' render={this.renderTourResult} />
           <Route exact path='/tours' component={Tours} />
-          <Route path='/tour/:id' render={this.renderEditProject} />
           <Route render={() => <Redirect to='/' />} />
         </Switch>
 

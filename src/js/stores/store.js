@@ -12,6 +12,14 @@ class Store {
   tours = []
 
   @observable
+  selectedTour = {
+    id: 0,
+    map: `tour1`,
+    title: `Surreal tour`,
+    desc: `Surrealisme wil ervoor zorgen, dat je een andere kijk op de werkelijkheid krijgt. Het wil dat je de achterliggende betekenis achter het kunstwerk zoekt, en hieruit leert. Enkele voorbeelden van bekende surrealisten zijn: René Magritte, Max Ernst, Salvador Dali en Frida Kahlo.`
+  }
+
+  @observable
   artworks = []
 
   @observable
@@ -34,6 +42,11 @@ class Store {
   randomizeArtworks = () => {
     const shuffledArray = this.artworks.sort(() => .5 - Math.random());
     this.randomArtworks = shuffledArray.slice(0, 3);
+  }
+
+  @action
+  setSelectedTour = tour => {
+    this.selectedTour = tour;
   }
 
   @action

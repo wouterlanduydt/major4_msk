@@ -16,7 +16,7 @@ const TourResult = ({id, desc, title, map, store}) => {
         <Link to='/' >
           <span className='red-btn result__back-btn' onClick={handleClickHome}>Home</span>
         </Link>
-        <img className='result__tour' src={`../../../assets/svg/${map}.svg`} alt={`${map}`} />
+        <img className='result__tour' src={`../../../assets/svg/${map}.svg`} alt={map} />
       </div>
       <div className='result__container-right'>
         <div className='result__container-right-top'>
@@ -24,7 +24,7 @@ const TourResult = ({id, desc, title, map, store}) => {
             <h1 className='result__title'>{title}</h1>
           </header>
           <p className='result__desc'>{desc}</p>
-          <TourResultActions id={id} />
+          <TourResultActions id={id} title={title} />
         </div>
         <img src={`../../../assets/img/tour_img${id}.jpg`} alt={`tour_img${id}`} className='result__tour-img' />
       </div>
