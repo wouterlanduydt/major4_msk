@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="23px" viewBox="0 0 38 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>busje</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tour-desktop" transform="translate(-1087.000000, -478.000000)" stroke="#FF0600" stroke-width="1.2">
+            <g id="links" transform="translate(705.000000, 468.000000)">
+                <g id="busje" transform="translate(383.000000, 10.000000)">
+                    <polygon id="Path-4" points="0.41796875 19.8798828 0.41796875 5.84379884 5.34214357 0.919624026 31.3459473 0.919624026 36.3991042 5.84379884 36.3991042 19.8798828 30.7907303 19.8798828 30.7000458 15.9383968 23.1369629 15.9383968 23.2276474 19.8798828 12.7890625 19.8798828 12.7890625 15.9383968 5.49797122 15.9383968 5.49797122 19.8798828"></polygon>
+                    <rect id="Rectangle" x="7.6" y="18.6" width="2.8" height="3.38666992"></rect>
+                    <rect id="Rectangle-Copy" x="25.6" y="18.6" width="2.8" height="3.38666992"></rect>
+                    <polyline id="Path-5" points="36.2019043 11.1376953 30.6942139 11.1376953 30.6942139 4.77282715"></polyline>
+                    <path d="M5.6,6.89352855 L5.6,11.059668 L26.4,11.059668 L26.4,5.6 L6.92972732,5.6 L5.6,6.89352855 Z" id="Rectangle-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

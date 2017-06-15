@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="37px" viewBox="0 0 23 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tour-overzicht" transform="translate(-707.000000, -499.000000)" fill="#4A4A4A">
+            <path d="M715.035534,517.5 L729.106602,503.428932 L725.571068,499.893398 L711.5,513.964466 L711.428932,513.893398 L707.893398,517.428932 L707.964466,517.5 L707.893398,517.571068 L711.428932,521.106602 L711.5,521.035534 L725.571068,535.106602 L729.106602,531.571068 L715.035534,517.5 Z" id="arrow"></path>
+        </g>
+    </g>
+</svg>
