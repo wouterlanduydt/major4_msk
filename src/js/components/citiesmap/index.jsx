@@ -19,7 +19,7 @@ const CitiesMap = ({store}) => {
         <Link to='/create/stats' className='create__next-container'>
           <button disabled={!enoughCitiesSeleted}
             className={classNames(`create__next`, {'button-disabled': !enoughCitiesSeleted})}>
-            Ga op reis</button>
+            Ga op reis &rsaquo;</button>
         </Link>
       </div>
     </section>

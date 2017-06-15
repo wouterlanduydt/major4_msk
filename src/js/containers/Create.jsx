@@ -7,7 +7,7 @@ const Create = () => {
   return (
     <section className='create'>
       <Link to='/' >
-        <span className='create__back-btn'>Terug</span>
+        <span className='create__back-btn'>	&lsaquo; Terug</span>
       </Link>
       <CitiesMap />
     </section>
