@@ -53,7 +53,7 @@ a {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to right, #ff5c58, #ff5c58 43.5%, transparent 43.5%);
+  background: linear-gradient(to right, #ff5c58, #ff5c58 43vw, transparent 43vw);
 
   &::before {
     display: block;
@@ -411,9 +411,9 @@ a {
     animation: fadein 1s linear;
     animation-fill-mode: both;
     animation-delay: 3s;
-    margin-top: 3rem;
     font-size: 3.3rem;
     padding: 1rem 2rem;
+    margin: 3rem 0 0;
   }
 
   &__img {
@@ -561,4 +561,197 @@ a {
   0% { top: 15.5rem; }
 
   100% { top: 0; }
+}
+
+@media (width <= 1068px) {
+
+  .homepage {
+    background: linear-gradient(to right, #ff5c58, #ff5c58 38vw, transparent 38vw);
+
+    &__img01 {
+      width: 40vw;
+    }
+  }
+}
+
+@media (width <= 1020px) {
+
+  .create {
+
+    &__map__title {
+      margin-top: 6rem;
+    }
+  }
+}
+
+@media (width <= 940px) {
+
+  .create {
+
+    &__back-btn {
+      margin: 2rem 0 0 2rem;
+    }
+  }
+}
+
+@media (width <= 980px) {
+
+  .homepage__img01 {
+    margin-right: 3rem;
+  }
+}
+
+@media (width <= 929px) {
+
+  .homepage {
+
+    &__create-btn {
+      padding: 1.5rem 3rem;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__discover-btn {
+      width: 47.7rem;
+    }
+  }
+}
+
+@media (width <= 890px) {
+
+  .create {
+
+    &__map__title {
+      margin-top: 9rem;
+    }
+  }
+}
+
+@media (width <= 881px) {
+
+  .create {
+
+    &__artworks__item {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (width <= 845px) {
+
+  .homepage {
+    flex-direction: column;
+    background: transparent;
+    overflow: visible;
+
+    &::before {
+      display: none;
+    }
+
+    &__img01 {
+      height: 30vh;
+      width: 100vw;
+      margin: 0;
+      border: none;
+      padding-bottom: 1rem;
+      background: linear-gradient(to right, #ff5c58 0, #ff5c58 98%, transparent 98%, transparent);
+    }
+
+    &__container {
+      height: 70vh;
+      width: 80vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-context {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__create-a {
+      margin: auto;
+    }
+
+    &__title {
+      padding-top: 4rem;
+    }
+  }
+}
+
+@media (width <= 720px) {
+
+  .mapboxgl-map {
+    width: 100vw;
+    height: 30vh;
+  }
+}
+
+@media (width <= 680px) {
+
+  .stats {
+
+    &__title {
+      font-size: 6.6vw;
+    }
+
+    &__list__item {
+      font-size: 5vw;
+    }
+
+    &__justmsk {
+      font-size: 5vw;
+    }
+
+    &__next-btn {
+      font-size: 4.9vw;
+    }
+
+    &__back-btn {
+      font-size: 3.6vw;
+    }
+  }
+}
+
+@media (width <= 596px) {
+
+  .homepage {
+
+    &::after {
+      background-size: 50%;
+    }
+
+    &__container {
+      width: 90vw;
+    }
+
+    &__introtext {
+      font-size: 3.5vw;
+    }
+
+    &__title {
+      font-size: 8vw;
+    }
+
+    &__subtitle {
+      font-size: 4.5vw;
+    }
+
+    &__create-btn {
+      font-size: 5vw;
+    }
+
+    &__discover-btn {
+      font-size: 4.5vw;
+      width: 80vw;
+      line-height: 120%;
+    }
+
+    &__link-msk {
+      margin-bottom: 1.5rem;
+    }
+  }
 }
