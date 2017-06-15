@@ -24,8 +24,7 @@ const EuropeMap = ({store}) => {
         center={[7.8774936, 47.1212712]}
         zoom={[3]}
         minZoom={3}
-        maxZoom={6}
-        containerStyle={{height: `100vh`, width: `45vw`}}>
+        maxZoom={6}>
         {
           cities.map(
           c => (
