@@ -46,6 +46,12 @@ a {
   padding: 1rem;
   text-transform: uppercase;
   font-size: 2.4rem;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: color(red a(.6));
+  }
+
 }
 
 .homepage {
@@ -54,20 +60,6 @@ a {
   position: relative;
   overflow: hidden;
   background: linear-gradient(to right, #ff5c58, #ff5c58 43vw, transparent 43vw);
-
-  /*&::before {
-    display: block;
-    content: '';
-    width: 63.9rem;
-    height: 63.9rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url(../assets/svg/paperplane_rotate.svg) no-repeat bottom left;
-    animation: paperplane-rotate 25s infinite linear;
-    z-index: -1;
-    transform-origin: center center;
-  }*/
 
   &::after {
     display: block;
@@ -135,6 +127,7 @@ a {
     color: white;
     position: relative;
     cursor: pointer;
+    transition: background .2s;
 
     &::after {
       display: block;
@@ -159,6 +152,7 @@ a {
     color: color(red a(.6));
     text-decoration: underline;
     padding-left: 2.8rem;
+    transition: color .2s;
 
     &:hover {
       color: color(red);
@@ -191,6 +185,13 @@ a {
     font-size: var(--small-buttn-fonts);
     padding: 1rem;
     border: .1rem solid white;
+    opacity: .8;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
   }
 
   &__map {
@@ -236,6 +237,9 @@ a {
 
     &-no-selected {
       height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     &__title {
@@ -252,6 +256,12 @@ a {
       padding: 1rem;
       align-self: left;
       text-transform: uppercase;
+      transition: background-color .2s;
+
+      &:hover {
+        background-color: color(red a(.6));
+      }
+
     }
 
     &__container {
@@ -306,6 +316,11 @@ a {
       font-weight: bold;
       color: red;
       background: transparent;
+      transition: transform .2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
   }
@@ -320,6 +335,11 @@ a {
     border: var(--line-width) solid red;
     padding: 1rem;
     margin: 0 2rem 2rem 0;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: color(red a(.6));
+    }
 
     &-container {
       align-self: flex-end;
@@ -480,8 +500,11 @@ a {
   &__tour {
     width: 35vw;
     margin: auto;
+    animation: .5s popin ease-out;
 
     &-img {
+      position: relative;
+      animation: .4s slidein ease-out;
       width: 55vw;
       height: 35vh;
       object-fit: cover;
@@ -495,6 +518,13 @@ a {
     background: #ff6565;
     align-self: flex-start;
     margin: 4rem 0 10vh 4rem;
+    opacity: .8;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 1;
+      background: #ff6565;
+    }
   }
 
   &__container-right {
@@ -538,6 +568,11 @@ a {
     align-items: center;
     color: red;
     text-decoration: underline;
+    transition: color .2s;
+
+    &:hover {
+      color: color(red a(.5));
+    }
 
     &-dwnld::before {
       display: block;
@@ -575,7 +610,16 @@ a {
   z-index: -2;
 
   &__back {
+    background-color: var(--red-color);
     border: .1rem solid white;
+    opacity: .8;
+    transition: opacity .2s;
+
+    &:hover {
+      background-color: var(--red-color);
+      opacity: 1;
+    }
+
   }
 
   &__left {
@@ -590,12 +634,15 @@ a {
       margin-top: 12rem;
       align-self: center;
       width: 35vw;
+      animation: popin .4s ease-out;
     }
 
     &__image {
       object-fit: cover;
-      width: 55vw;
+      width: 53vw;
       height: 30vh;
+      position: relative;
+      animation: slideinfromleft .3s ease-out;
     }
 
   }
@@ -658,14 +705,36 @@ a {
   100% { opacity: 1; }
 }
 
+@keyframes popin {
+
+  0% { scale: .3 .3; }
+
+  100% { scale: 1 1; }
+}
+
 @keyframes slidein {
 
-  0% { top: 15.5rem; }
+  0% { top: 20rem; }
 
   100% { top: 0; }
 }
 
-@media (width <= 1190px) {
+@keyframes slideinfromleft {
+
+  0% { right: 55vw; }
+
+  100% { right: 0; }
+}
+
+@media (width <= 1068px) {
+
+  .homepage {
+    background: linear-gradient(to right, #ff5c58, #ff5c58 38vw, transparent 38vw);
+
+    &__img01 {
+      width: 40vw;
+    }
+  }
 
   .create {
 

@@ -11,7 +11,7 @@ const CreateStats = ({store}) => {
     <section className='stats'>
 
       <Link to='/create'>
-        <span className='stats__back-btn red-btn'>Terug</span>
+        <span className='stats__back-btn red-btn'> ‹ Terug</span>
       </Link>
 
       <div className='stats__container'>
@@ -28,7 +28,7 @@ const CreateStats = ({store}) => {
         <p className='stats__justmsk'>Die je ook gewoon in het <span className='stats__justmsk-bold'>MSK</span> kan bewonderen?</p>
 
         <Link to='/create/result'>
-          <span className='stats__next-btn red-btn'>Bereken jouw tour</span>
+          <span className='stats__next-btn red-btn'>Bereken jouw tour › </span>
         </Link>
       </div>
 
