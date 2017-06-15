@@ -15,7 +15,7 @@ const CityDetails = ({id, name, store}) => {
   if (name === ``) {
     return (
       <section className='create__detail create__detail-no-selected'>
-        <p>Klik op een stad voor meer info</p>
+        <p>Klik op een stad voor meer info.</p>
       </section>
     );
   } else {
@@ -24,20 +24,22 @@ const CityDetails = ({id, name, store}) => {
         <header>
           <h1 className='create__detail__title'>{name}</h1>
         </header>
-        <p className='create__detail__desc'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-        <ul className='create__artworks'>
-          {
-            randomArtworks.map(
-            r => (
-              <Artwork {...r} key={r.id} />
+        <div className='create__detail__container'>
+          <p className='create__detail__desc'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+          <ul className='create__artworks'>
+            {
+              randomArtworks.map(
+              r => (
+                <Artwork {...r} key={r.id} />
+                )
               )
-            )
-          }
-        </ul>
+            }
+          </ul>
+        </div>
         <button
           disabled={enoughCitiesSeleted}
           className={classNames(`create__detail__add-btn`, {'button-disabled': enoughCitiesSeleted})}
-          onClick={handleAddLoved}>Hier wil ik naartoe!
+          onClick={handleAddLoved}>Hier wil ik naartoe
         </button>
       </section>
     );

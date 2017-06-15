@@ -77,7 +77,7 @@ a {
     background: url(../assets/svg/homepage_map.svg) no-repeat top right, url(../assets/svg/homepage_colliseum.svg) no-repeat bottom right;
     position: absolute;
     z-index: -2;
-    background-size: 33%;
+    background-size: 33%, 26%;
   }
 
   &__img01 {
@@ -87,12 +87,12 @@ a {
     margin-top: 1.8rem;
     object-fit: cover;
     object-position: center right;
-    border-right: 2px solid red;
-    border-top: 2px solid red;
+    border-right: var(--line-width) solid red;
+    border-top: var(--line-width) solid red;
   }
 
   &__container {
-    width: 59rem;
+    width: 45rem;
     margin-left: 0;
 
     &-link {
@@ -112,15 +112,15 @@ a {
   }
 
   &__subtitle {
-    font-size: 2.7rem;
-    border-left: .1rem solid #ff5c58;
+    font-size: 2.5rem;
+    border-left: var(--line-width) solid #ff5c58;
     padding-left: 2rem;
     margin-bottom: 2rem;
   }
 
   &__introtext {
-    font-size: 2.2rem;
-    line-height: 140%;
+    font-size: var(--stand-fonts);
+    line-height: var(--stand-lineh);
     padding-bottom: 3rem;
   }
 
@@ -128,8 +128,8 @@ a {
     border-radius: 0;
     box-shadow: none;
     background: color(red a(.6));
-    border: 1px solid red;
-    font-size: 3rem;
+    border: var(--line-width) solid red;
+    font-size: var(--big-buttn-fonts);
     padding: 1.5rem 8rem 1.5rem 3rem;
     text-transform: uppercase;
     color: white;
@@ -154,12 +154,16 @@ a {
 
   &__discover-btn {
     display: block;
-    font-size: 2rem;
+    font-size: var(--stand-fonts);
     text-transform: uppercase;
     color: color(red a(.6));
     text-decoration: underline;
-    text-align: center;
+    padding-left: 2.8rem;
     width: 52.7rem;
+
+    &:hover {
+      color: color(red);
+    }
   }
 
   &__link-msk {
@@ -186,7 +190,7 @@ a {
     margin: 4rem 0 0 4rem;
     text-transform: uppercase;
     color: white;
-    font-size: 2.4rem;
+    font-size: var(--small-buttn-fonts);
     padding: 1rem;
     border: .1rem solid white;
   }
@@ -200,9 +204,9 @@ a {
 
     &__title {
       text-align: right;
-      width: 47.5vw;
+      width: 40.5vw;
       margin-top: 5rem;
-      font-size: 3.3rem;
+      font-size: var(--title-fonts);
       font-family: denmark;
       font-weight: bold;
       color: #322d2d;
@@ -220,15 +224,15 @@ a {
     flex-direction: column;
     justify-content: space-between;
     height: 95vh;
-    width: 49vw;
+    width: 54vw;
   }
 
   &__detail {
     position: relative;
-    left: -1rem;
-    border: .1rem solid red;
+    left: -2rem;
+    border: var(--line-width) solid red;
     background-color: white;
-    padding: 2rem;
+    padding: 3.4rem;
     display: flex;
     flex-direction: column;
 
@@ -237,29 +241,45 @@ a {
     }
 
     &__title {
-      font-size: 3rem;
+      font-size: var(--title-fonts);
       margin-bottom: 1.6rem;
     }
 
     &__add-btn {
-      border: .12rem solid red;
+      border: var(--line-width) solid red;
       background-color: color(red a(.5));
       color: white;
-      font-size: 2.2rem;
-      width: 80%;
-      margin: 2rem 0 1rem;
-      align-self: center;
+      font-size: var(--small-buttn-fonts);
+      margin: 2rem 0 0;
+      padding: 1rem;
+      align-self: left;
+      text-transform: uppercase;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__desc {
+      font-size: 1.5rem;
+      line-height: var(--stand-fonth);
+      width: 30%;
+      padding-right: 2rem;
     }
 
   }
 
   &__loved {
+    position: absolute;
     align-self: center;
     width: 40vw;
+    bottom: 13rem;
+
 
     &__title {
       font-family: denmark;
-      font-size: 3rem;
+      font-size: var(--title-fonts);
       font-weight: bold;
     }
 
@@ -296,18 +316,20 @@ a {
     }
 
     align-self: right;
-    font-size: 2.7rem;
+    font-size: var(--big-buttn-fonts);
     text-transform: uppercase;
     color: white;
     background-color: color(red a(.5));
-    border: .1rem solid red;
+    border: var(--line-width) solid red;
+    padding: 1rem;
+    margin: 0 2rem 2rem 0;
 
   }
 
   &__artworks {
     display: flex;
     flex-wrap: wrap;
-    margin: 2rem 0 1rem;
+    margin: -2rem 0 1rem 1rem;
 
     &__item {
       margin-right: 1rem;
@@ -325,6 +347,7 @@ a {
     &__details {
       width: 12rem;
       font-size: 1rem;
+      margin-top: 1rem;
     }
 
     &__title {
@@ -655,6 +678,29 @@ a {
       width: 40vw;
     }
   }
+
+  .create {
+
+    &__detail {
+
+      &__container {
+        flex-direction: column;
+      }
+
+      &__desc {
+        width: 100%;
+      }
+
+      &__add-btn {
+        align-self: center;
+      }
+    }
+
+    &__artworks {
+      justify-content: space-between;
+      margin: 2rem 0 1rem 1rem;
+    }
+  }
 }
 
 @media (width <= 1020px) {
@@ -674,6 +720,7 @@ a {
     &__back-btn {
       margin: 2rem 0 0 2rem;
     }
+
   }
 }
 

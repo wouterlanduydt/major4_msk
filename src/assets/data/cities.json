@@ -9,7 +9,8 @@
     "nMusea": 6,
     "distance": 50,
     "lon": 51.2605833,
-    "lat": 3.0820626
+    "lat": 3.0820626,
+    "desc": ""
   },
   {
     "id": 1,
@@ -165,7 +166,8 @@
     "nMusea": 6,
     "distance": 1228,
     "lon": 45.4055776,
-    "lat": 12.2413166
+    "lat": 12.2413166,
+    "desc": "De charme van Venetië is voor velen onweerstaanbaar. Waterwegen, reflecties van schitterende stadsgezichten in het water en mooie eeuwenoude gebouwen vormen een betoverend geheel. Enkele kunstwerken die je kunt bezichtigen in Antwerpen zijn:"
   },
   {
     "id": 14,
@@ -177,7 +179,8 @@
     "nMusea": 2,
     "distance": 59,
     "lon": 51.2603011,
-    "lat": 4.2301098
+    "lat": 4.2301098,
+    "desc": "Het Rubenshuis is de plaats waar men het dichtst bij de leefwereld van de grootste barokkunstenaar ten noorden van de Alpen komt. Enkele kunstwerken die je kunt bezichtigen in Antwerpen zijn:"
   },
   {
     "id": 15,
@@ -189,7 +192,8 @@
     "nMusea": 5,
     "distance": 2733,
     "lon": 41.0049806,
-    "lat": 28.7313113
+    "lat": 28.7313113,
+    "desc": "Dankzij de boeiende historie als voormalige hoofdstad van het Romeinse- Byzantijnse- en Ottomaanse Rijk is het aantal culturele bezienswaardigheden ongekend. Enkele kunstwerken die je kunt bezichtigen in Istanbul zijn:"
   },
   {
     "id": 16,
@@ -201,7 +205,8 @@
     "nMusea": 2,
     "distance": 1322,
     "lon": 41.3947687,
-    "lat": 2.0785565
+    "lat": 2.0785565,
+    "desc": "Barcelona is een belangrijke culturele stad en als hoofdstad van Catalonië heeft ze ook een belangrijke rol in de Catalaanse cultuur en folklore. De rijke kunstgeschiedenis van Barcelona zal je verrassen. Enkele kunstwerken die je kunt bezichtigen in Barcelona zijn:"
   },
   {
     "id": 17,
@@ -213,7 +218,8 @@
     "nMusea": 3,
     "distance": 941,
     "lon": 55.6712473,
-    "lat": 12.4906279
+    "lat": 12.4906279,
+    "desc": "In Kopenhagen zijn veel gallerijen gevestigd, zowel in een klassieke als moderne zetting. Met gallerijen van wereldformaat ook rondom Kopenhagen, is het hele gebied een geweldige plek voor kunstliefhebbers. Enkele kunstwerken die je kunt bezichtigen in Copenhagen zijn:"
   },
   {
     "id": 18,
@@ -225,7 +231,8 @@
     "nMusea": 2,
     "distance": 1574,
     "lon": 40.4168355,
-    "lat": -3.7388097
+    "lat": -3.7388097,
+    "desc": "Madrid staat bekend voor het Prado, het gigantische kunstmuseum van Madrid. Het museum is vooral bekend om zijn indrukwekkende verzameling 14de- tot 19de-eeuwse schilderkunst. Enkele kunstwerken die je kunt bezichtigen in Madrid zijn:"
   },
   {
     "id": 19,
@@ -237,7 +244,8 @@
     "nMusea": 3,
     "distance": 296,
     "lon": 48.8588376,
-    "lat": 2.2773458
+    "lat": 2.2773458,
+    "desc": "Parijs staat onder meer bekend om haar rijke historie en cultuur. Cultuur snuiven lukt dan ook prima in de mix van oude en nieuwe gebouwen, vele musea, bioscopen en musicals. Enkele kunstwerken die je kunt bezichtigen in Parijs zijn:"
   }
 
 ]
