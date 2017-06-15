@@ -13,7 +13,7 @@ const TourResult = ({id, desc, title, map, store}) => {
   return (
     <section className='result'>
       <div className='result__container-left'>
-        <Link to='/' >
+        <Link to='/' className='result__back-a'>
           <span className='red-btn result__back-btn' onClick={handleClickHome}>Home</span>
         </Link>
         <img className='result__tour' src={`../../../assets/svg/${map}.svg`} alt={map} />
