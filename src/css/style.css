@@ -454,7 +454,7 @@ a {
   }
 
   &__tour {
-    width: 40vw;
+    width: 35vw;
     margin: auto;
 
     &-img {
@@ -470,12 +470,11 @@ a {
     border-color: white;
     background: #ff6565;
     align-self: flex-start;
-    margin: 4rem 0 20vh 4rem;
+    margin: 4rem 0 10vh 4rem;
   }
 
   &__container-right {
     width: 55vw;
-    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -485,7 +484,6 @@ a {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 60vw;
     }
   }
 
@@ -505,7 +503,10 @@ a {
     width: 80%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
   &__link {
@@ -667,12 +668,21 @@ a {
   }
 }
 
-@media (width <= 940px) {
+@media (width <= 1000px) {
 
-  .create {
+  .result {
 
-    &__back-btn {
-      margin: 2rem 0 0 2rem;
+    &__container-actions {
+      width: 70%;
+      justify-content: center;
+    }
+
+    &__title {
+      margin-top: 5rem;
+    }
+
+    &__link {
+      margin-bottom: 2rem;
     }
   }
 }
@@ -681,6 +691,23 @@ a {
 
   .homepage__img01 {
     margin-right: 3rem;
+  }
+}
+
+@media (width <= 940px) {
+
+  .create {
+
+    &__back-btn {
+      margin: 2rem 0 0 2rem;
+    }
+  }
+
+  .result {
+
+    &__tour {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -720,6 +747,13 @@ a {
       margin-bottom: 1rem;
     }
   }
+
+  .result {
+
+    &__tour-img {
+      height: 30vh;
+    }
+  }
 }
 
 @media (width <= 845px) {
@@ -743,7 +777,6 @@ a {
     }
 
     &__container {
-      height: 70vh;
       width: 80vw;
       display: flex;
       flex-direction: column;
@@ -765,11 +798,55 @@ a {
   }
 }
 
+@media (width <= 800px) {
+
+  .result {
+
+    &__title {
+      font-size: 4rem;
+    }
+  }
+}
+
 @media (width <= 720px) {
 
   .mapboxgl-map {
     width: 100vw;
     height: 30vh;
+  }
+}
+
+@media (width <= 720px) {
+
+  .result {
+    flex-direction: column;
+
+    &__container-left {
+      height: 35vh;
+      width: 100vw;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__tour {
+      margin-top: -13rem;
+
+      &-img {
+        width: 100vw;
+        height: 40vh;
+      }
+    }
+
+    &__container-right {
+      width: 100vw;
+    }
+
+    &__container-actions {
+      width: 90%;
+      justify-content: space-around;
+    }
   }
 }
 
@@ -835,6 +912,41 @@ a {
 
     &__link-msk {
       margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media (width <= 570px) {
+
+  .result {
+
+    &__tour {
+      margin-top: -10rem;
+      margin-right: 23vw;
+    }
+  }
+}
+
+@media (width <= 500px) {
+
+  .result {
+
+    &__tour {
+      width: 18rem;
+    }
+  }
+}
+
+@media (width <= 480px) {
+
+  .result {
+
+    &__tour {
+      margin-right: 13vw;
+
+      &-img {
+        height: 35vw;
+      }
     }
   }
 }
