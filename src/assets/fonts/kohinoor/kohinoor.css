@@ -1,0 +1,17 @@
+@font-face {
+  font-family: kohinoor;
+  src:
+    url(kohinoorbangla-medium-webfont.woff2) format('woff2'),
+    url(kohinoorbangla-medium-webfont.woff) format('woff');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: kohinoor;
+  src:
+    url(kohinoorbangla-regular-webfont.woff2) format('woff2'),
+    url(kohinoorbangla-regular-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

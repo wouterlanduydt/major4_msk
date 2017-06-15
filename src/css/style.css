@@ -2,7 +2,7 @@
 @import 'vars';
 
 body {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: kohinoor;
   font-size: 1.6rem;
   color: var(--dark-color);
 }
@@ -324,7 +324,7 @@ a {
 
     &__details {
       width: 12rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     &__title {
