@@ -4,7 +4,7 @@ import {string, number} from 'prop-types';
 import classNames from 'classnames';
 import Artwork from './Artwork';
 
-const CityDetails = ({id, name, store}) => {
+const CityDetails = ({id, name, desc, store}) => {
 
   const {addLoved, enoughCitiesSeleted, randomArtworks} = store;
 
@@ -25,7 +25,7 @@ const CityDetails = ({id, name, store}) => {
           <h1 className='create__detail__title'>{name}</h1>
         </header>
         <div className='create__detail__container'>
-          <p className='create__detail__desc'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+          <p className='create__detail__desc'>{desc}</p>
           <ul className='create__artworks'>
             {
               randomArtworks.map(
@@ -49,12 +49,14 @@ const CityDetails = ({id, name, store}) => {
 CityDetails.propTypes = {
   id: number,
   name: string,
+  desc: string,
   store: PropTypes.observableObject.isRequired
 };
 
 CityDetails.defaultProps = {
   id: 0,
   name: ``,
+  desc: ``,
   nMusea: 0,
   nPainters: 0,
   distance: 0,

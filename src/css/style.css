@@ -555,6 +555,12 @@ a {
     margin-top: 9rem;
   }
 
+  &__share {
+    font-family: denmark;
+    border-bottom: .1rem solid red;
+    color: var(--dark-color);
+  }
+
   &__desc {
     width: 80%;
     margin: 3rem auto;
