@@ -1098,7 +1098,7 @@ a {
       flex-direction: row;
       width: 100vw;
       align-items: center;
-      height: auto;
+      min-height: auto;
 
       &__map {
         margin: auto;
