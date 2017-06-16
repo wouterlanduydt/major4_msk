@@ -897,6 +897,10 @@ a {
   z-index: -2
 }
 
+.tours__container {
+  height: 0;
+}
+
 .tours__back {
   background-color: #ff6565;
   border: 1px solid white;
@@ -923,7 +927,7 @@ a {
           justify-content: space-between;
   background-color: #ff6565;
   width: 50vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .tours__left__map {
@@ -1287,6 +1291,10 @@ a {
   .create__artworks__image {
     width: 8rem;
     height: 8rem;
+  }
+
+  .tours {
+    font-size: 4rem;
   }
 }
 

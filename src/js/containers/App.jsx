@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import DevTools from 'mobx-react-devtools';
+// import DevTools from 'mobx-react-devtools';
 import {observer, inject} from 'mobx-react';
 
 import {object} from 'prop-types';
@@ -41,8 +41,7 @@ class App extends Component {
   render() {
     return (
       <section>
-        {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
-
+        {/* {process.env.NODE_ENV !== `production` ? <DevTools /> : null} */}
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/create' component={Create} />
