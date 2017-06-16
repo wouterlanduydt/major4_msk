@@ -942,7 +942,10 @@ a {
   }
 
   .tours {
-    font-size: 4rem;
+
+    &__right__title {
+      font-size: 4rem;
+    }
   }
 }
 

@@ -1294,6 +1294,9 @@ a {
   }
 
   .tours {
+  }
+
+  .tours__right__title {
     font-size: 4rem;
   }
 }
