@@ -58,7 +58,6 @@ a {
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
   background: linear-gradient(to right, #ff5c58, #ff5c58 43vw, transparent 43vw);
 
   &::after {
@@ -128,6 +127,7 @@ a {
     position: relative;
     cursor: pointer;
     transition: background .2s;
+    pointer-events: none;
 
     &::after {
       display: block;
@@ -169,6 +169,8 @@ a {
 
 .create {
 
+  height: 0;
+
   &__container {
     z-index: -3;
     display: flex;
@@ -199,16 +201,18 @@ a {
     &__title-container {
       z-index: 3;
       position: fixed;
+      pointer-events: none;
     }
 
     &__title {
       text-align: right;
       width: 40.5vw;
-      margin-top: 5rem;
-      font-size: var(--title-fonts);
+      margin-top: 4rem;
+      font-size: 2.5rem;
       font-family: denmark;
       font-weight: bold;
       color: #322d2d;
+      pointer-events: none;
     }
 
     &__annotation:hover {
@@ -349,8 +353,7 @@ a {
 
   &__artworks {
     display: flex;
-    flex-wrap: wrap;
-    margin: -2rem 0 1rem 1rem;
+    margin: -2rem 0 0 1rem;
 
     &__item {
       margin-right: 1rem;
@@ -455,9 +458,9 @@ a {
     animation: fadein 1s linear;
     animation-fill-mode: both;
     animation-delay: 3s;
-    font-size: 3.3rem;
+    font-size: 2.5rem;
     padding: 1rem 2rem;
-    margin: 3rem 0 0;
+    margin: 3rem 0 1rem;
   }
 
   &__img {
@@ -499,7 +502,7 @@ a {
 
   &__tour {
     width: 35vw;
-    margin: auto;
+    margin: 15rem auto 0;
     animation: .5s popin ease-out;
 
     &-img {
@@ -527,6 +530,10 @@ a {
     }
   }
 
+  &__back-a {
+    height: 0;
+  }
+
   &__container-right {
     width: 55vw;
     text-align: center;
@@ -546,6 +553,12 @@ a {
     font-family: denmark;
     font-weight: bold;
     margin-top: 9rem;
+  }
+
+  &__share {
+    font-family: denmark;
+    border-bottom: .1rem solid red;
+    color: var(--dark-color);
   }
 
   &__desc {
@@ -600,6 +613,8 @@ a {
   left: 0;
   width: 45vw;
   height: 65vh;
+  cursor: grab;
+  background: #ff6966;
 }
 
 .tours {
@@ -654,11 +669,10 @@ a {
     align-items: space-between;
     flex-wrap: wrap;
     width: 45vw;
-    height: 5vw;
-    margin-bottom: 10vh;
+    margin-bottom: 7vh;
 
     &-li {
-      margin-right: 4rem;
+      margin: 0 2rem;
     }
 
     &__text {
@@ -726,15 +740,7 @@ a {
   100% { right: 0; }
 }
 
-@media (width <= 1068px) {
-
-  .homepage {
-    background: linear-gradient(to right, #ff5c58, #ff5c58 38vw, transparent 38vw);
-
-    &__img01 {
-      width: 40vw;
-    }
-  }
+@media (width <= 1188px) {
 
   .create {
 
@@ -767,6 +773,20 @@ a {
 
     &__img01 {
       width: 40vw;
+    }
+  }
+}
+
+@media (width <= 1030px) {
+
+  .homepage {
+
+    &__create-btn {
+      padding: 1.5rem 3rem;
+
+      &::after {
+        display: none;
+      }
     }
   }
 }
@@ -815,26 +835,9 @@ a {
     &__back-btn {
       margin: 2rem 0 0 2rem;
     }
-  }
 
-  .result {
-
-    &__tour {
-      margin: 0 auto;
-    }
-  }
-}
-
-@media (width <= 929px) {
-
-  .homepage {
-
-    &__create-btn {
-      padding: 1.5rem 3rem;
-
-      &::after {
-        display: none;
-      }
+    &__map__title {
+      margin-top: 2.5rem;
     }
   }
 }
@@ -866,12 +869,22 @@ a {
   }
 }
 
+@media (width <= 870px) {
+
+  .create {
+
+    &__artworks__image {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}
+
 @media (width <= 845px) {
 
   .homepage {
     flex-direction: column;
     background: transparent;
-    overflow: visible;
 
     &::before {
       display: none;
@@ -915,6 +928,14 @@ a {
       padding-left: 0;
     }
   }
+
+  .create {
+
+    &__artworks__image {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
 }
 
 @media (width <= 800px) {
@@ -927,15 +948,66 @@ a {
   }
 }
 
-@media (width <= 720px) {
+@media (width <= 773px) {
 
-  .mapboxgl-map {
-    width: 100vw;
-    height: 30vh;
+  .tours {
+
+    &__right {
+      margin-top: 10vh;
+    }
   }
 }
 
 @media (width <= 720px) {
+
+  .mapboxgl-map {
+    width: 100vw;
+    height: 35vh;
+  }
+
+  .create {
+
+    &__artworks__image {
+      width: 13rem;
+      height: 13rem;
+    }
+
+    &__loved {
+      position: relative;
+      width: 80vw;
+      margin: 4rem 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__right {
+      width: 100vw;
+      height: auto;
+      margin: 0;
+    }
+
+    &__detail {
+      left: 0;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+    }
+
+    &__map__title {
+      position: absolute;
+      right: 2rem;
+      top: -6.5rem;
+      width: 65vw;
+
+      &-container {
+        width: 100vw;
+        position: relative;
+      }
+    }
+  }
 
   .result {
     flex-direction: column;
@@ -950,7 +1022,7 @@ a {
     }
 
     &__tour {
-      margin-top: -13rem;
+      margin-top: 2rem;
 
       &-img {
         width: 100vw;
@@ -969,12 +1041,20 @@ a {
   }
 }
 
+@media (width <= 690px) {
+
+  .stats__title {
+    margin-top: 1rem;
+    font-size: 4rem;
+  }
+}
+
 @media (width <= 680px) {
 
   .stats {
 
     &__title {
-      font-size: 6.6vw;
+      font-size: 6vw;
     }
 
     &__list__item {
@@ -986,11 +1066,50 @@ a {
     }
 
     &__next-btn {
-      font-size: 4.9vw;
+      font-size: 3.7vw;
     }
 
     &__back-btn {
       font-size: 3.6vw;
+    }
+  }
+}
+
+@media (width <= 650px) {
+
+  .tours {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__left {
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      align-items: center;
+      height: auto;
+
+      &__map {
+        margin: auto;
+      }
+
+      &__image {
+        height: 30.5vw;
+      }
+    }
+
+    &__right {
+      margin-top: 14vh;
+      width: 100vw;
+
+      &__desc {
+        width: 62vw;
+        line-height: 1.8rem;
+      }
+    }
+
+    &__nav__list {
+      width: 60vw;
     }
   }
 }
@@ -1033,13 +1152,28 @@ a {
   .result {
 
     &__tour {
-      margin-top: -10rem;
+      margin-top: 5rem;
       margin-right: 23vw;
     }
   }
 }
 
 @media (width <= 500px) {
+
+  .create {
+
+    &__artworks {
+
+      &__details {
+        width: auto;
+      }
+
+      &__image {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
 
   .result {
 

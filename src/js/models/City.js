@@ -11,8 +11,9 @@ export default class City {
   lon = ``
   lat = ``
   loved = ``
+  desc = ``
 
-  constructor({id, name, country, artStyle, artStyleId, nPainters, nMusea, distance, lon, lat, loved}) {
+  constructor({id, name, country, artStyle, artStyleId, nPainters, nMusea, distance, lon, lat, loved, desc}) {
     this.id = id;
     this.name = name;
     this.country = country;
@@ -24,6 +25,7 @@ export default class City {
     this.lon = lon;
     this.lat = lat;
     this.loved = loved;
+    this.desc = desc;
   }
 
 }

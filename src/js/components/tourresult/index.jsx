@@ -13,7 +13,7 @@ const TourResult = ({id, desc, title, map, store}) => {
   return (
     <section className='result'>
       <div className='result__container-left'>
-        <Link to='/' >
+        <Link to='/' className='result__back-a'>
           <span className='red-btn result__back-btn' onClick={handleClickHome}>Home</span>
         </Link>
         <img className='result__tour' src={`../../../assets/svg/${map}.svg`} alt={map} />
@@ -22,6 +22,7 @@ const TourResult = ({id, desc, title, map, store}) => {
         <div className='result__container-right-top'>
           <header>
             <h1 className='result__title'>{title}</h1>
+            <a className='result__share' href='https://www.facebook.com/sharer/sharer.php?u=https%3A//dry-garden-69599.herokuapp.com/' target='_blank'>Share</a>
           </header>
           <p className='result__desc'>{desc}</p>
           <TourResultActions id={id} title={title} />

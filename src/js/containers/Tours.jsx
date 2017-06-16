@@ -11,7 +11,7 @@ const Tours = ({store}) => {
   return (
     <section className='tours__container'>
       <Link to='/' >
-        <span className='red-btn tours__back'>Terug</span>
+        <span className='red-btn tours__back'> ‹ Terug</span>
       </Link>
       <Tour {...selectedTour} />
     </section>
